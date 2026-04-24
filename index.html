@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="light" lang="vi"><head>
 <meta charset="utf-8"/>
@@ -111,6 +111,18 @@
         }
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
         }
     </style>
 </head>
@@ -288,26 +300,39 @@
 <h2 class="text-2xl font-black text-on-surface tracking-tight uppercase">Thương hiệu uy tín</h2>
 <div class="h-px bg-gray-200 flex-grow mx-8"></div>
 </div>
-<div class="grid grid-cols-3 md:grid-cols-6 gap-6">
-<!-- Brand Logo Placeholder -->
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">VINPEARL</span>
-</div>
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">SHERATON</span>
-</div>
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">CGV</span>
-</div>
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">VƯỜN VUA</span>
-</div>
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">FLC HOTEL</span>
-</div>
-<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-<span class="text-gray-400 font-black text-xl italic tracking-tighter">ALMA RESORT</span>
-</div>
+<div class="overflow-hidden relative w-full bg-white py-8 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+    <!-- Gradient Masks for smooth fading effect at edges -->
+    <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+    
+    <div class="animate-marquee flex items-center">
+        <!-- Original List -->
+        <div class="flex gap-16 items-center min-w-max px-8">
+            <img src="https://logo.clearbit.com/zalopay.vn" alt="ZaloPay" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/momo.vn" alt="MoMo" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/grab.com" alt="Grab" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/hotdeal.vn" alt="HotDeal" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/tripadvisor.com" alt="TripAdvisor" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/shopee.vn" alt="Shopee" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/kiotviet.vn" alt="KiotViet" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/vnpay.vn" alt="VNPay" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/pasgo.vn" alt="PasGo" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/cgv.vn" alt="CGV" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+        </div>
+        <!-- Duplicated List for infinite loop -->
+        <div class="flex gap-16 items-center min-w-max px-8">
+            <img src="https://logo.clearbit.com/zalopay.vn" alt="ZaloPay" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/momo.vn" alt="MoMo" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/grab.com" alt="Grab" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/hotdeal.vn" alt="HotDeal" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/tripadvisor.com" alt="TripAdvisor" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/shopee.vn" alt="Shopee" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/kiotviet.vn" alt="KiotViet" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/vnpay.vn" alt="VNPay" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/pasgo.vn" alt="PasGo" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+            <img src="https://logo.clearbit.com/cgv.vn" alt="CGV" class="h-8 md:h-10 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+        </div>
+    </div>
 </div>
 </section>
 <!-- Dành cho bạn: Product Grid -->
