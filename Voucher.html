@@ -108,44 +108,39 @@
 </head>
 <body class="bg-[#FAFAFA] text-text-primary">
 <!-- TopNavBar -->
-<header class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-[0_1px_4px_rgba(0,0,0,0.05)] docked full-width top-0 sticky z-50">
-<div class="max-w-7xl mx-auto flex flex-col w-full px-4 lg:px-8">
+<!-- TopNavBar Shell -->
+<header class="sticky top-0 w-full z-50 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm antialiased">
+<div class="flex flex-col w-full max-w-7xl mx-auto px-4 md:px-8">
 <div class="flex items-center justify-between h-[72px] gap-8">
-<!-- Brand -->
+<!-- Brand Identity -->
 <div class="flex-shrink-0">
-<span class="text-2xl font-black text-[#FF5B00] tracking-tighter">Dealtoday</span>
+<span class="text-2xl font-black text-orange-600 dark:text-orange-500 tracking-tighter">Dealtoday</span>
 </div>
 <!-- Navigation Links -->
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="index.html">Hot Deals</a>
-<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Du lịch</a>
-<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Ẩm thực</a>
-<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Giải trí</a>
-<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Sức khỏe</a>
-<a class="text-[#FF5B00] font-bold border-b-2 border-[#FF5B00] pb-1" href="Voucher.html">Voucher</a>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="index.html">Hot Deals</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="Travel.html">Du lịch</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="Food.html">Ẩm thực</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="Entertainment.html">Giải trí</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="Health.html">Sức khỏe</a>
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1 font-bold transition-all duration-200" href="Voucher.html">Voucher</a>
 </nav>
 <!-- Search Bar -->
-<div class="flex-grow max-w-md hidden lg:flex">
-<div class="relative w-full flex">
-<input class="w-full border-2 border-[#FF5B00] rounded-l-xl px-4 py-2 focus:outline-none text-body-main font-body-main" placeholder="Tìm kiếm voucher, thương hiệu..." type="text"/>
-<button class="bg-[#FF5B00] text-white px-6 rounded-r-xl active:scale-95 transition-transform flex items-center justify-center">
+<div class="flex-grow max-w-md relative">
+<div class="flex items-center bg-gray-50 border border-orange-600 rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-orange-600">
+<input class="w-full bg-transparent border-none focus:ring-0 px-4 py-2 text-sm" placeholder="Tìm kiếm deal hot..." type="text"/>
+<button class="bg-orange-600 text-white px-4 py-2 flex items-center justify-center scale-95 active:scale-90 transition-transform">
 <span class="material-symbols-outlined">search</span>
 </button>
 </div>
 </div>
-<!-- Trailing Icons -->
+<!-- Trailing Actions -->
 <div class="flex items-center gap-4">
-<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
-<span class="material-symbols-outlined text-gray-600">notifications</span>
+<button class="text-gray-700 dark:text-gray-300 scale-95 active:scale-90 transition-transform flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
 </button>
-<div class="relative">
-<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
-<span class="material-symbols-outlined text-gray-600">shopping_cart</span>
-</button>
-<span class="absolute top-0 right-0 bg-[#FF5B00] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white">3</span>
-</div>
-<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
-<span class="material-symbols-outlined text-gray-600">person</span>
+<button class="text-gray-700 dark:text-gray-300 scale-95 active:scale-90 transition-transform flex items-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
 </button>
 </div>
 </div>
@@ -403,48 +398,67 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="bg-gray-50 dark:bg-gray-950 w-full border-t border-gray-200 dark:border-gray-800 mt-20">
-<div class="max-w-7xl mx-auto py-12 px-4 md:px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-<div class="col-span-1 md:col-span-1">
-<span class="text-lg font-bold text-gray-900 dark:text-white mb-4 block">Dealtoday</span>
-<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                        Nền tảng thương mại điện tử hàng đầu cung cấp voucher, thẻ quà tặng và các ưu đãi hấp dẫn từ hàng ngàn thương hiệu uy tín.
-                    </p>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 py-16 max-w-7xl mx-auto px-6">
+<div class="space-y-6">
+<span class="text-lg font-bold text-gray-900 dark:text-white block">Dealtoday</span>
+<p class="text-gray-500 dark:text-gray-400 leading-relaxed">Sàn thương mại điện tử chuyên biệt về voucher, deal khuyến mãi các lĩnh vực Ẩm thực, Du lịch, Giải trí và Sức khỏe.</p>
+<div class="flex items-center gap-4">
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
 </div>
-<div class="col-span-1">
-<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Thông tin</h4>
-<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-[#FF5B00] transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Privacy Policy</a></li>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Về Dealtoday</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Giới thiệu</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Tuyển dụng</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Điều khoản sử dụng</a></li>
 </ul>
 </div>
-<div class="col-span-1">
-<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Hỗ trợ</h4>
-<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Contact</a></li>
-<li><a class="hover:text-[#FF5B00] transition-colors" href="#">FAQs</a></li>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Trung tâm hỗ trợ</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Góp ý, khiếu nại</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Liên hệ đối tác</a></li>
 </ul>
 </div>
-<div class="col-span-1">
-<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Liên hệ</h4>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:bg-[#FF5B00] hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-lg">social_leaderboard</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:bg-[#FF5B00] hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-lg">alternate_email</span>
-</a>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Tải ứng dụng</h4>
+<p class="text-gray-500 dark:text-gray-400 mb-6">Trải nghiệm mua sắm tốt nhất trên app mobile.</p>
+<div class="flex flex-col gap-3">
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">shop</span>
+<div class="flex flex-col">
+<span class="text-[8px] opacity-70">Get it on</span>
+<span class="text-sm font-bold leading-none">Google Play</span>
+</div>
+</div>
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">ios</span>
+<div class="flex flex-col">
+<span class="text-[8px] opacity-70">Download on the</span>
+<span class="text-sm font-bold leading-none">App Store</span>
 </div>
 </div>
 </div>
-<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
-<span>© 2024 Dealtoday. All rights reserved.</span>
-<div class="flex gap-6 mt-4 md:mt-0">
-<img class="h-8 opacity-60" data-alt="official vietnam ministry of industry and trade registered business seal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TVAV0X0cyv0Hm_ybfdBNYVyTx19ZDlBmrk5GYPOZRLXrb4GVcS9AeMsf80VwjoubJ7kJ8mMJEChaZeKJk_3zejGEP4XAAPvTLTFZtxNR9tt076MI87GPM11bwftvpgVgoNEHz8eF-mqAPXhbRpdxpExnO_txLsOeJIO1rlR0-XNIBL0YTRCxPfloM2p46i5ueqPAo27MFZTl36XM_jWS4B5_kd3xVJdEWi2lTm5Y_0GAyyWNRfe_yF6LfTfZkpcERKI1h4HvCDc"/>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 py-8">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 dark:text-gray-400">© 2024 Dealtoday Clone. Một sản phẩm thương mại điện tử chuyên biệt.</p>
+<div class="flex gap-8">
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Facebook</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Instagram</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Youtube</a>
 </div>
 </div>
 </div>
 </footer>
 </body></html>
+
