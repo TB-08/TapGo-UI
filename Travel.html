@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#a83900",
+                    "surface-container-high": "#ffe2d9",
+                    "on-surface": "#271812",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#fff1ec",
+                    "outline-variant": "#e4beb1",
+                    "primary-container": "#ff5b00",
+                    "status-sale": "#EE4D2D",
+                    "tertiary-fixed-dim": "#a0caff",
+                    "on-background": "#271812",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#8d1600",
+                    "inverse-primary": "#ffb59a",
+                    "text-secondary": "#757575",
+                    "secondary-container": "#fd5837",
+                    "inverse-surface": "#3e2c26",
+                    "tertiary-fixed": "#d2e4ff",
+                    "tertiary-container": "#0096fc",
+                    "error": "#ba1a1a",
+                    "secondary": "#b62506",
+                    "background": "#fff8f6",
+                    "on-primary-fixed": "#380d00",
+                    "surface-container-highest": "#fadcd2",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#907065",
+                    "on-tertiary-fixed-variant": "#00497e",
+                    "on-primary-container": "#521800",
+                    "tertiary": "#0061a6",
+                    "surface": "#fff8f6",
+                    "on-primary-fixed-variant": "#802a00",
+                    "secondary-fixed": "#ffdad3",
+                    "surface-dim": "#f1d4ca",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#a83900",
+                    "surface-muted": "#F5F5F5",
+                    "on-secondary-fixed": "#3e0500",
+                    "surface-bright": "#fff8f6",
+                    "surface-variant": "#fadcd2",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#580a00",
+                    "on-surface-variant": "#5b4137",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#ffede7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#ffe9e2",
+                    "border-subtle": "#E0E0E0",
+                    "primary-fixed-dim": "#ffb59a",
+                    "on-tertiary-fixed": "#001c37",
+                    "primary-fixed": "#ffdbce",
+                    "on-tertiary-container": "#002d51",
+                    "text-primary": "#333333"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "header-height": "72px",
+                    "gutter": "1rem",
+                    "margin-x": "2rem",
+                    "stack-md": "1rem",
+                    "container-max": "1200px",
+                    "stack-sm": "0.5rem",
+                    "topbar-height": "40px"
+            },
+            "fontFamily": {
+                    "body-main": ["Plus Jakarta Sans"],
+                    "top-bar": ["Plus Jakarta Sans"],
+                    "price-large": ["Plus Jakarta Sans"],
+                    "mega-menu-item": ["Plus Jakarta Sans"],
+                    "nav-primary": ["Plus Jakarta Sans"],
+                    "mega-menu-title": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "top-bar": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "mega-menu-item": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "mega-menu-title": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] font-body-main text-on-surface">
+<!-- Top Bar (Shared Component Strategy) -->
+<div class="bg-slate-50 border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-8 h-[40px] flex items-center justify-between font-plus-jakarta-sans text-xs font-medium text-slate-500">
+<div class="flex gap-6">
+<span class="hover:text-orange-600 cursor-pointer transition-colors duration-200">Kênh Người Bán</span>
+<span class="hover:text-orange-600 cursor-pointer transition-colors duration-200">Tải ứng dụng</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1 hover:text-orange-600 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined text-[16px]">language</span>
+                    Tiếng Việt
+                </div>
+<div class="flex items-center gap-1 hover:text-orange-600 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                    Hà Nội
+                </div>
+</div>
+</div>
+</div>
+<!-- Sticky Main Header -->
+<header class="sticky top-0 z-50 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.05)] h-[72px]">
+<div class="max-w-7xl mx-auto px-8 flex items-center justify-between h-full gap-8">
+<!-- Brand Logo -->
+<div class="text-2xl font-bold tracking-tighter text-[#FF5B00] shrink-0">
+                Dealtoday
+            </div>
+<!-- Main Nav -->
+<nav class="hidden lg:flex items-center gap-6 h-full font-nav-primary text-nav-primary">
+<a class="text-slate-700 hover:text-orange-600 transition-all duration-300 h-full flex items-center" href="#">Hot Deals</a>
+<a class="text-orange-600 border-b-2 border-orange-600 h-full flex items-center" href="#">Du lịch</a>
+<a class="text-slate-700 hover:text-orange-600 transition-all duration-300 h-full flex items-center" href="#">Ẩm thực</a>
+<a class="text-slate-700 hover:text-orange-600 transition-all duration-300 h-full flex items-center" href="#">Giải trí</a>
+<a class="text-slate-700 hover:text-orange-600 transition-all duration-300 h-full flex items-center" href="#">Sức khỏe</a>
+<a class="text-slate-700 hover:text-orange-600 transition-all duration-300 h-full flex items-center" href="#">Voucher</a>
+</nav>
+<!-- Search Bar -->
+<div class="flex-grow max-w-xl">
+<div class="flex items-center border border-[#FF5B00] rounded-xl overflow-hidden h-10">
+<input class="flex-grow border-none focus:ring-0 px-4 text-sm" placeholder="Tìm kiếm dịch vụ, khách sạn..." type="text"/>
+<button class="bg-[#FF5B00] text-white h-full px-5 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</div>
+<!-- User Actions -->
+<div class="flex items-center gap-5">
+<div class="relative cursor-pointer">
+<span class="material-symbols-outlined text-slate-700 text-2xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-[#FF5B00] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-slate-100 overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a user with a friendly smile, clean white background, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ndCd2LZ_dashX2XQuao28boI0BszAHFyhLYYPp9wgrWgfo62Usd_LjXRqA2CBUNec1S6TAavB_igXeuVRcfvdzZRGg8oFeljY_9Q4Heqa0HQGOmoQssA0iiS2CNgKHJ-dlkRQoA9JzfzYoQxQULfgf6h0vKsXJB9t3PR-GSDgrtG-IjOSSmjuHG4dgZl2PM5y8O9UPuWgpydG09Q0xsOLWG-9ACY-7A-GS1eWDtky2rVYGo0ZFuXjENm4liQAKtwJeurwIxDuhI"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 py-6">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs text-slate-500 mb-8 font-medium">
+<span class="hover:text-orange-600 cursor-pointer">Trang chủ</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-slate-900">Du lịch</span>
+</nav>
+<!-- Section 1: Destinations -->
+<section class="mb-12">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-orange-600" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h2 class="text-lg font-bold text-slate-800 uppercase tracking-tight">Điểm đến yêu thích</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Destination Card Loop -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant cityscape of Da Nang featuring the dragon bridge at night with colorful lights and reflection on the water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL-LGCb2KPY7LogcVeeh3Su3KStCLZuG6gVn3u0cJ60EnX6WWAGBpImniOCAoFaFt5vfIbqrdwvPI_I4Qxt5ijoCrqOPfYB4VIc7kgdpwCuctMSaCxJ7Cxi-MMmMhPeoZEUV8bpofNriowGH5oQZsYVR5RgXgWgN58hRZYBwFlvK9LV8Si_MZ83XsBWRg4OXZaQUb2mSUvDHwlhCZslg6OXBo0SxA3Jw2V54VRjnxgH3VuXA3bF_AFcYtUjJUg2_kIKnltKQm1BOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Đà Nẵng</span>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="crystal clear turquoise water and white sand beach in Phu Quoc island with tropical palm trees and bright sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3fb6_H2vBi0OYIR_okwFDPe7SbCEq9GnqGDw_NgtXdxMY6dFYl3lZpUAzOqqTd0EvQ5Faj1x-kIOnXglcmCT8SgrFCjvu5o_jzjris995JzCTgMtLUfIRV-Wb8d5IaS2zxWujtnaXheXPtgWMETth_Xi0NjGnrafmMptz-TLQ1DolJ_7selR-7u2ECNmDmmqj8u0WL2cN-2f3Nu-CT432PR0O9uRXHQRQhlon5eH2o3IgYHvvh8l2gAMsg--KsRfPExiHWhObxUA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Phú Quốc</span>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="misty morning in Da Lat mountains with pine forests and traditional french colonial architecture peeking through the fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQEStQWdQWwdShkyoLjQCnDqVky27UwlI_x35TD6T56P2-fZWb1frF0CNpTUvO9iSAQCb3JNu4an3hhUGQReX7B6Ecz6echeu7RQtzU5mDjIPEtz-r541jU2LJTOtC2FWYKUwgjzjFxWgXDn96_163T-kyhHPDdKriePWRHa2PedxqA3YkdTea26Ewrp6ki_H1hGz2sDEMpqVZfBHe9RwBy-0lG3GrhJQ7Y0ExtNem9GL4N13JWWZL36qT4eE04tgCtp1LuksNHzk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Đà Lạt</span>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="luxurious beach resort in Nha Trang overlooking the ocean at sunset with warm orange and purple hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCddGf7kfzyVjeJoWFa0w3Eaz2bWoRU_MWN-Lw4AD3GjeBPvFVcWZAfCSWhyyc4n5THCkSN5PBW6CmOD-ARdYv2s15d414m-UGWMe_VrIiVZlg_lqcDvCZwp_wFdyITHcDV0sqrFxEjRT5_wQ0kxLN6C47ks6bGSLRfTApAdd-JGAL0qSJSVBwKOZPpem0_QWze8LGdGYvjPw3dx6SrG6LkYQU_BJ4eyN_Hnutyb4dcUXq_V52mGi-l9_X2dQZsjSs7gNIQ7mfS1nA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Nha Trang</span>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="aerial view of emerald waters and limestone pillars in Ha Long Bay under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBn4og-mh9RraUIxRTYhAaj5HyW-tRCrz_iypMeqoOBX26aKoz7Uk8xdUHLw3PAt7IarbxyOcRD7ARNMn_mBhYk8N67lF0kbYkKvKedLSaPJr1b7fSk1xPp2ynVNBIblqNGo5wZh_wbe-Y2wiBxnpT84kUkP1u4to84axLRzeh_nEBDexZZjxJo8ujOLFttTIueLw1M1VTougmUhSZFeLqufI6BR-YzBN5uVqdJmlnxHaE1dYPTX4c8wPV0yR8RFIaGEX-Q44ef6Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Hạ Long</span>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="modern skyscraper skyline of Ho Chi Minh City featuring Bitexco tower and vibrant city lights at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCFgK2XpIVqljZg4y9HIHLMuyFQQaA4QPqTO57gQZ5Nl_QPmof_E4cgzdgAp94rkzgGfzVRJatjSWWO_n7CPx6EkIA7Flx3Qvq5S1XL6f8K9kI6qN-ExDaEuZRCTLT-Fx8n_zwiyRh4gkT-s_BMS3j_5rddqXOF5lYc7xRX0FrqCUEYv5y9OEXula-yQkyqHO_mlVCZqcoN0vWZ_RIWWrfawK6K8t04Oq8lFiTBrrLiQBlBsTj6W67jaStGlLIcBm5HwRDVS0KDM4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-white font-bold text-base">Hồ Chí Minh</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Main Listing Grid -->
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar -->
+<aside class="w-full lg:w-1/4 space-y-6">
+<!-- Danh mục -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+<h3 class="font-bold text-slate-800 mb-4 pb-2 border-b border-slate-50 text-sm uppercase">Danh mục</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-orange-600 font-semibold border-l-4 border-orange-600 pl-3 py-1 cursor-pointer">
+                            Khách sạn - Resort
+                        </li>
+<li class="flex items-center gap-2 text-slate-600 hover:text-orange-600 pl-4 py-1 cursor-pointer transition-colors">
+                            Tour du lịch
+                        </li>
+<li class="flex items-center gap-2 text-slate-600 hover:text-orange-600 pl-4 py-1 cursor-pointer transition-colors">
+                            Vé tham quan
+                        </li>
+<li class="flex items-center gap-2 text-slate-600 hover:text-orange-600 pl-4 py-1 cursor-pointer transition-colors">
+                            Combo du lịch
+                        </li>
+</ul>
+</div>
+<!-- Địa điểm -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+<h3 class="font-bold text-slate-800 mb-4 pb-2 border-b border-slate-50 text-sm uppercase">Địa điểm</h3>
+<div class="relative mb-4">
+<input class="w-full border-slate-200 rounded-lg text-sm pl-4 pr-10 h-10 focus:ring-orange-600/20 focus:border-orange-600" placeholder="Tìm địa điểm..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-slate-400 text-sm">search</span>
+</div>
+<div class="space-y-3 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-orange-600">Đà Nẵng (42)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-orange-600">Phú Quốc (35)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-orange-600">Đà Lạt (28)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-orange-600">Nha Trang (21)</span>
+</label>
+</div>
+</div>
+<!-- Hạng sao -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+<h3 class="font-bold text-slate-800 mb-4 pb-2 border-b border-slate-50 text-sm uppercase">Hạng sao</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded text-orange-600 focus:ring-orange-600/20 border-slate-300" type="checkbox"/>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</label>
+</div>
+</div>
+</aside>
+<!-- Main Listing -->
+<div class="w-full lg:w-3/4">
+<!-- Toolbar -->
+<div class="flex items-center justify-between mb-6 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+<div class="text-slate-600 font-medium">Tìm thấy <span class="text-orange-600 font-bold">297</span> kết quả</div>
+<div class="flex items-center gap-2">
+<span class="text-sm text-slate-500 mr-2">Sắp xếp:</span>
+<button class="px-4 py-2 bg-[#FF5B00] text-white text-sm font-semibold rounded-lg">Mới nhất</button>
+<button class="px-4 py-2 bg-slate-50 text-slate-600 text-sm font-semibold rounded-lg hover:bg-slate-100">Giá tăng dần</button>
+<button class="px-4 py-2 bg-slate-50 text-slate-600 text-sm font-semibold rounded-lg hover:bg-slate-100">Giá giảm dần</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+<!-- Hotel Card 1 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="modern luxury hotel exterior with large pool area and tropical landscaping at midday with bright sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc_dxsplKzeFZX2ictmDJALlnfCJkOb-okBM9i7Sq6WQ8tg7muqWC9H9nDhgZynCfVbjfLf3VrGoxTyPEJ4CI5jioNrcCU9YSfdnlmrs1rzm1l1OhVN_rRQeobPL0BOzRYlMMBCN8kfl9yFgPECOj-HAd9iBA1xLxpGV_tf6JIu8y3rR4b9QDJ7DUKz6lcQ8SP92c3lw3Rq2Jb_-ZHknPoooyiMRfzUwftAz8rGTSWwobf4ON83ihH2RBDZHLM6i_pFN2-0qpLYgs"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-15%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="circular luxury hotel brand logo with minimalistic gold emblem on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhN0eQQwdABf2Uk_I4p1hVdflZyzhcQpl8TSTGGUnk5wOOibol7Y6PZbOOPSw4FPRSSkwxb9pKKf8BvVdKg3XAeZveEzmcAQYRdq8ns5XItfDiti-mZGhgJkFwMp0N4FmCtyIbkV-8nxmyqUYb1SFQUbrM90UTnQ_SyVD-FhARtc71s4dbJzGGM0YZipjgeWJybJlMtG6lIo-MmCaSLVhasgs5BhGk_Gwh6r1wJIaDSxiXVgjehpZpELvyCPUl-1W7OAaHWZmUln0"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">InterContinental Danang Sun Peninsula Resort</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Bán đảo Sơn Trà, Đà Nẵng</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(124)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">2.450.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">2.880.000đ</div>
+</div>
+</div>
+</div>
+<!-- Repeated Cards for Grid Fill -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="interior view of a boutique hotel room with king sized bed, contemporary wood decor and floor to ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcDKiaIIM9vECelxIXC1ONkVa1pzmXbTlNt0eeXDH9Ce_Heotk2Wonk5hOK5kipgKx6qgp0Qw1kmzEELV9jUCkr-Vk2YKHeI5Gp01kOrInpyUZ75ujGIhEiMJciochQjJxbUogmSpYiCazdQuli3k2lyyehfMEmY05L2rD3mZ4W8DnX86z8neWn42B13MTuVhBWfrjYRXqtDNCSEey1_85ygLtZOg8MJ9U7VwGnxPgmfdGVMuEi34dJhCDRJVqxS9d8jr7e3O1b4c"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-20%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="professional corporate hotel logo featuring elegant typography on a navy blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByGMs14B21o51mDkyboVEW2vkDkAosAQHHdm2F-K-jQ87qtHetnTKHSDRU2i8kG2W5p95x1xFnBKVD36fl10QMN9JW2bfSyqhagxxGR3YXYSROvwsEwCTFtc__6pm22sYPTL6fwyrCls1k0n0h6-P5P65Jy4yVZEhsj1odrKEuUJDsHqIqijm4r2JPOKELwJYJH04VsqYWWWOKR0NptI6hJ1wCQp--1tnKWGWq6V8nFTE2--oSixcbDwwNjhElQh8SGhJb9kOw3Bw"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Meliá Vinpearl Cam Ranh Beach Resort</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Cam Lâm, Nha Trang</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(89)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">1.890.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">2.360.000đ</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="front entrance of a heritage hotel with classic stone columns and grand wooden doors in a historical district" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApmZMrOUFECydgUJFLsQ9M_oyuWXQRvR1DA_jv_Vh4sx1GPt8hg6pfLN2EmxuneFYcFgcJXDRVP4uF2L-WOzE7Y7VApRFqva_PhJ1Hn1uPyA1CGk7dAA4tTI0Qm3LIiBhLiio7NXfFhZksed_A2K4LX1gmMnf_S3quWFb45iJrTd7kJPTkQmzpvs-Y68d_0wdIrff2bsyjRNJeePBd1pt212GY8wikZSw8Fwk2IvXoQLfnfAnizFDC2oxDqkuKevN8RYJYqTGpGfk"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-10%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="minimalist modern hotel icon with soft grey and charcoal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJBPBS1O7vEnmuzSCu5bOAHOtwsCl-S1ZZOUBmXi86JBDeOhebfbs9zVwDA9q-IM9lrd1GTGQLZnlmIAUvF3llIKPK5NJSRVD3Poe9y9cFBHkwplkl1r8ut_0U8ohykAJGsCMQ14yKBPpRjgt1JB5W1F9sRq8qYrIHAwzgP2QqZjhgC3UpeqFI9n03UaYDLk04NambWBuTfL1zWq2bTJ5siH_ExmtytdxmqjiZ63IMo-Jc4--k8W8t6Q8pF3eOzdpCZzt59J0gpEY"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Silk Path Grand Resort &amp; Spa Sapa</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Sa Pa, Lào Cai</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(210)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">3.120.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">3.460.000đ</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="luxurious infinity pool merging with the ocean horizon at a tropical island resort during blue hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChzlNg_zTi1S8zqLHh0mHZkwny4ZNVPYdmlsKWWd3wKdQYJ0xzBrmO0FnJImWIGrmhFDHyHgchRvm-3LeZrkWQt77Mm6aHNc17HDG1HaDxe3kRZ_Qsls9fAX9Yn0allu6i0pwKbOn-gHMa0f7Qq9Ch8p5zVyZ-8h6F746qB5vpgSlqJukmbDDxFZ1-bWivLDQMsp8Ur6Z7MsnZeiMOCPs-fg_6LwmOj2xDjBdn_rFBq8dQxDzuFT9AjezALvw0K_4MmirhR9UKrmw"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-30%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="boutique resort logo with hand-drawn floral element in olive green and ivory colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIOZW1gN4e9Ivs5YGMvxvwufsRRPm5OCFkqDew7k9cbT7pqJOEKYwYqPsl0xKpeJQZwOyXdB_s8BL4YYz3nvWm9d_OE6gjHctKUoUlpeKuyzYRp5CD2kWauHLdkTP3GolycR9ZY3fKBqtra9ilWXSqal3mxQqy-u3leBSNgskfVTNK5xWOgqVv_xWlzSKZGrJ4tGHOf2VhM8KHYNw1uG0KNHacO8PZ3NUQhGjRG43xrlbZuA21y6IhT31q4OkU3EGh768s1MRWO84"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">JW Marriott Phu Quoc Emerald Bay Resort</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Bãi Khem, Phú Quốc</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(452)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">4.560.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">6.500.000đ</div>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="zen garden inspired resort patio with wooden deck and stone paths leading to a tranquil pond" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCob-sqVY9Sur0Toef1xT5a4LKkm07aFIr4APX6hmBwQJUJ6E1jtFyHzADBgmrnLONlHW_oKKCpQyvZArFdLqvUvrq5GmHHoy3kWOLlc7n0ELRlTo-rNninNI2Q2wzeano-tohGK5NxGfsyo3dsSMs9ok75_0ZmmKM5DdEsC10npoJ1_NzvchperonUDD0Fa38YyzmKM6UFVbbpVudm834M3rSRFtqMAdbIDO9Qk65DHOdf_eqByBMCCUpGXp8bfTjkGNnvxl33_kE"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-5%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="modern minimalist hotel logo with bold sans-serif font" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKy0hwh3DQcqy4H8IVSA3P4cfYoMF-sUnJJKR938GGrDHDmf_ojBFH20W5xUalx10Kf_-IgFVUZr5MzobiKnS8bmIg3hXQ3sZGYGrXmoTyMJ0xzaIBeu5ccgAec1K1RK3hPEb37O9FTp8YcIcO_LUyrNESCsjtOxOO0C8mNslhS0EmYKjCQvKHrvhjKQ_dEs98O9PH_LuEFHvGgBrwUotTJqDZJWcs3r1r2vOayZUvw-QO1a65f04-YTdEgjUrBVfp5gau0DwxKk"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Sheraton Grand Danang Resort &amp; Convention</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Hòa Hải, Đà Nẵng</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(67)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">2.850.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">3.000.000đ</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="cozy boutique hotel lounge with velvet sofas and warm fireplace lighting in a winter mountain setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC7wKrjRQEttzjwAWDKr_pQ-XFcgFkJvMb2Q2kGpf9z6-2500yRkmw6YknzW49Enp6os9h4JkzNyfxObZKkkl-1gf6orf_NuvLP3JuZKlWqoxbA_0cSrDlkXvBytBdHuZnTJc6nuaqG0AftQMu8vnC-DQ1cZ47GaUhekFMafFb0zjdXXAglDTTWSW2ZzwRP4acb_9AbBuBmINau0WqMNt7cj6teDi0_ud0S0UuWP81N9ueJx2tMeVom4LIqj3Y8j7SpKOvAO6K4RQ"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-12%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="creative hotel icon with geometric shapes in earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwYeBXQ4Q8WiYKWjMawa-ls0SN8SuA7JMdPy0HtK8-K8iZqOnH2oQkMl7bmOnREOx1aAUE5t3CqdmvlCwo8_CXqxCUJBI-B2aZuL-NdgPwSnBX2ogBMnwFUUmplvTrurYT0z9SbhU6yRQxPszLnZkOxxETx8Wdu0qGclnLO1RMg54-4qp_v1x6V3BwiRyyWpJWBabJtyH52bGoxRY_sD2-gjOtr04MIuB7N5OVsibxYoL63ZkHGdmtYcZkD9jpzeq58Ka4O9Rg8V4"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Bình An Village Resort Dalat</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Hồ Tuyền Lâm, Đà Lạt</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(156)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">1.650.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">1.875.000đ</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="aerial view of a beachfront villa with private infinity pool and sun loungers on a white terrace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFzLeJQ-3aAb7h-2mA60Nl2IhYZHz5LcvPcEA4K6_70p-yStTzA_V2MhzPjf4oeTtOucauH5p6K8XdzziVS1Im9FZO1ky3vbiFGlJX6EvPf5d-j9rZ_AGZ9cy6LcVCoXNGP3mW624yfdkUHAc6UuaGBRwJM4Ql6XcJ6nQvh7XeXYb4m06xbkdONpYJOyPEbX_aclhOrSkAgtUNgdaxGz45tmfa0wnWlavZxndXJ_7TqnVVfY8WPXQzBOtvZD9RkEYNu6ScUzXFOAU"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-25%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="elegant resort logo with palm leaf silhouette in soft gold on cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA64tWvOBVOPpQTkl7_d6jnepmzookfeP41M9yXDSA9EO3DHAXLo5t5XvKQlY-SxCOcbQHHj2VUeGLNqvEos_PqznqQW_he_xko_paG8b57ldpi-CRc7mrDOfKH3RcHGi37PtAYSkfqNjwBnZo7i3xEZ1CkcswSayFfX206Vl9ffR0uCisugL5u4jpKdo7lMCjleQKz3QkLlKZ2SXIXvUatA4D27ef44xxDxZ3rnAXuMi1O-0ftkEjNLIkfJLoDltpTbanDwifXdE"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Ana Mandara Villas Dalat Resort &amp; Spa</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Đường Lê Lai, Đà Lạt</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(312)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">2.100.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">2.800.000đ</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-slate-100">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="lively pool party atmosphere at a modern resort with vibrant cocktails and blue umbrellas on a sunny day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpsZBqy5vmQ1dam-9gdNh8_qlumynaEHyAYLxvqJ1MKRKrogosr_Qdh7XVE7sAedyr8cTBH4U7k5_KE5Rikhr6U4nUdRoaPD2fLVxpzh71IScfxEdJWXSqPrd9S42nmcfieB5_vClXgHvhRXYpQeNCXwMY8rXbetHXUi4g_gATVgp9IcRYosHoL-jd9lnJsz_rFWPGOjhdudCjItAJRyxZtSlkeeN9tiq80SV_fHoqqWZS58-5ZWiewLBtuGIvCQxkCOAaNW3UPCA"/>
+<span class="absolute top-2 right-2 bg-status-sale text-white text-[11px] font-bold px-2 py-1 rounded-full">-18%</span>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="lifestyle brand logo with dynamic wave pattern in teal and orange" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvwzm20qxdUcXUQE7b89KXk7Uhn14Q7La8UdMkzqz-qcG6y334wqGaedFUCbpyxjO63YH5KoOD0cTGA-9xepOC6Ht0Gl6OMUzW3NnQ6ZxKW_8Kpynk0ZTHPmM8-YpWa2z109bzJkcCrhFCa8MCvt60kxvUDKwT1k2ni40I6HLH2JsQjmejP0kqHa-aF0On5Q9I0t4ZzKcFGg2gJ5BulS5_S5GA2rmCP_loWawUClQH1ief51nwu7KFUPQdKawl_PC2WR2hOy14AC8"/>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<h3 class="font-bold text-slate-900 text-[15px] line-clamp-2 leading-snug min-h-[42px]">Premier Village Danang Resort - Managed by Accor</h3>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Ngũ Hành Sơn, Đà Nẵng</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[11px] text-slate-400">(189)</span>
+</div>
+<div class="pt-2">
+<div class="text-[18px] font-bold text-[#FF5B00]">3.850.000đ</div>
+<div class="text-[12px] text-slate-400 line-through">4.700.000đ</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Placeholder -->
+<div class="mt-12 flex justify-center gap-2">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-slate-200 text-slate-600 font-bold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">1</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-slate-200 text-slate-600 font-bold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">2</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-slate-200 text-slate-600 font-bold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">3</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-slate-200 text-slate-600 font-bold">...</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-slate-200 text-slate-600 font-bold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component Strategy) -->
+<footer class="bg-slate-50 border-t border-slate-200 mt-20">
+<div class="max-w-7xl mx-auto py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900">Dealtoday</div>
+<p class="text-sm text-slate-500 leading-relaxed">Nền tảng thương mại điện tử hàng đầu về ưu đãi du lịch, ẩm thực và chăm sóc sức khỏe tại Việt Nam.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider">Hỗ trợ khách hàng</h4>
+<ul class="text-sm text-slate-600 space-y-2">
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Trung tâm trợ giúp</li>
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Chính sách bảo mật</li>
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Điều khoản dịch vụ</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider">Về chúng tôi</h4>
+<ul class="text-sm text-slate-600 space-y-2">
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Giới thiệu</li>
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Tuyển dụng</li>
+<li class="hover:text-orange-600 cursor-pointer transition-colors">Liên hệ</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider">Kết nối</h4>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-orange-600 hover:text-white cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-orange-600 hover:text-white cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<span>© 2024 Dealtoday Global. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="hover:text-orange-600 underline cursor-pointer">Privacy Policy</span>
+<span class="hover:text-orange-600 underline cursor-pointer">Terms of Service</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

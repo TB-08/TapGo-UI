@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb4a4",
+                        "primary-container": "#ff5b00",
+                        "surface-variant": "#fadcd2",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#f1d4ca",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb59a",
+                        "outline-variant": "#e4beb1",
+                        "primary-fixed": "#ffdbce",
+                        "status-sale": "#EE4D2D",
+                        "on-secondary": "#ffffff",
+                        "primary": "#a83900",
+                        "background": "#fff8f6",
+                        "surface-bright": "#fff8f6",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#d2e4ff",
+                        "secondary-fixed": "#ffdad3",
+                        "on-primary-fixed-variant": "#802a00",
+                        "tertiary-container": "#0096fc",
+                        "outline": "#907065",
+                        "on-secondary-container": "#580a00",
+                        "text-secondary": "#757575",
+                        "secondary-container": "#fd5837",
+                        "on-surface": "#271812",
+                        "primary-fixed-dim": "#ffb59a",
+                        "tertiary-fixed-dim": "#a0caff",
+                        "text-primary": "#333333",
+                        "secondary": "#b62506",
+                        "surface-tint": "#a83900",
+                        "surface-container": "#ffe9e2",
+                        "error": "#ba1a1a",
+                        "on-background": "#271812",
+                        "surface": "#fff8f6",
+                        "surface-container-high": "#ffe2d9",
+                        "on-surface-variant": "#5b4137",
+                        "on-primary-container": "#521800",
+                        "inverse-on-surface": "#ffede7",
+                        "on-tertiary-container": "#002d51",
+                        "border-subtle": "#E0E0E0",
+                        "surface-container-highest": "#fadcd2",
+                        "on-tertiary-fixed": "#001c37",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#3e2c26",
+                        "tertiary": "#0061a6",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#fff1ec",
+                        "on-primary-fixed": "#380d00",
+                        "on-secondary-fixed": "#3e0500",
+                        "on-tertiary-fixed-variant": "#00497e",
+                        "surface-muted": "#F5F5F5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#8d1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "1rem",
+                        "topbar-height": "40px",
+                        "gutter": "1rem",
+                        "container-max": "1200px",
+                        "margin-x": "2rem",
+                        "header-height": "72px",
+                        "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "nav-primary": ["Plus Jakarta Sans"],
+                        "price-large": ["Plus Jakarta Sans"],
+                        "mega-menu-title": ["Plus Jakarta Sans"],
+                        "mega-menu-item": ["Plus Jakarta Sans"],
+                        "body-main": ["Plus Jakarta Sans"],
+                        "top-bar": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "mega-menu-title": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "mega-menu-item": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "top-bar": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .bg-gradient-soft {
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] font-body-main text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-none">
+<div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between gap-8">
+<!-- Brand -->
+<div class="flex-shrink-0">
+<span class="text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500">Dealtoday</span>
+</div>
+<!-- Search Bar -->
+<div class="flex-grow max-w-xl">
+<div class="relative group">
+<input class="w-full h-11 pl-4 pr-12 rounded border-2 border-orange-600 focus:ring-0 focus:outline-none bg-white font-body-main text-sm" placeholder="Tìm kiếm ưu đãi giải trí..." type="text"/>
+<button class="absolute right-0 top-0 h-11 w-11 flex items-center justify-center bg-orange-600 text-white rounded-r">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-orange-600 transition-colors text-sm" href="#">Khuyến mãi</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-orange-600 transition-colors text-sm" href="#">Du lịch</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-orange-600 transition-colors text-sm" href="#">Ẩm thực</a>
+<a class="text-orange-600 dark:text-orange-500 font-semibold border-b-2 border-orange-600 pb-1 text-sm" href="#">Giải trí</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-orange-600 transition-colors text-sm" href="#">Sức khỏe</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-gray-600 hover:text-orange-600 transition-all p-2 rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="relative">
+<button class="text-gray-600 hover:text-orange-600 transition-all p-2 rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary-container text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full border border-white">2</span>
+</button>
+</div>
+<button class="text-gray-600 hover:text-orange-600 transition-all p-2 rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-4">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs text-text-secondary mb-6">
+<a class="hover:text-primary" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface">Giải trí</span>
+</nav>
+<!-- Category Grid Section -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined">celebration</span>
+</div>
+<h1 class="text-2xl font-extrabold tracking-tight text-on-surface">THẾ GIỚI GIẢI TRÍ</h1>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+<!-- Category Cards -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="colorful ferris wheel at dusk with bright neon lights against a deep blue evening sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwLzNmBAQyEjSJFeWlTv8KS4EG7Lgnfux76uibDfP0B8tLGWOlCbf6haTSdhLATExu32KDooIifDvyGxxghPlGvZf9jxYDm60THdv92Q17OYv_5ZZTw8srbSs-5IInvOOFZ0q98pH23kpFVAyKk37EGfKPdJaOYmrLT02f0nNUX_8pjUeIkDoxDVOrU-V4nTgihnKv2jx5JYCyxtK5O5A_GS8PvLLaZ_GeBKRFMhmZmlW5wdRIM9eY-4g4aBOrEJIAyUkorq7vK34"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Công Viên Giải Trí</span>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="interior of a modern luxury cinema with red velvet seats and soft ambient theater lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApDh4oqHyrJbir9ahCc3bAaxZuO63-PQl4Yz0kU2hPaUHi6iLc9sh1FIiPobwFEY59c4bZuluNsFTOzih0pw4PboEyoz0dbjylVT9uv7g2ZBmGBfGCxs3ARrO_LPxmn-3hHuGFUg0Eho5xSaC9dRYDaVLzvPEVZHWteT4fpOvckE13LaVF29QF6xOfSM8wLyPCokenk6mHAC2UxyvvPV_JM_y5T3mr4XJiMNFf-EGokQqGxZTfW7xg0jXvq2eCnSBNwURIccsbsRI"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Rạp Chiếu Phim</span>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="outdoor concert crowd with stage lights glowing orange and magenta during a high-energy performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9uRN3NXs-xUlfEkwVemspiQWi7p3Nmo1ZB8Cbj4Z4DzyQ0iYZ1EOE4UuETZcZpNbpYQPqnsA0ct9YXDNVja_dWdpkqHco45-7ICGU-lv_vJdcu2__vxT7FcXjQ7-KcuCiFCzq3hFutL-fSD_iUeQeDH4N5jn-iqgtJevYY4MYl13gYTlKE0sQo2WsTcl1Z74IG9OcBGrJinI2ww-B2u8ZyBdRFuJrRLXOfAOdTGty4gG4LYUmFKvFTMhGJrMspZCOe0ofROv0fBw"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Sự Kiện &amp; Âm Nhạc</span>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="brightly colored indoor kids playground with plastic slides and ball pits in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq3rD8twsve6mGzgyEMg-KIXRrbLNbUA5_yw-pC6Jz88gaS55dI72qL9oHYhGsTfJNL_o31FIMfROWnomVdT8FxlYj2bSlkUUV_j3-_XSSJeZ8SANyUdI_cX89p7vu175ePLvGx4e0eRmPWbYE411BrWp-gcHhwGnze_qd_X8tGRURDyyL2I6vxjZJFeYqmTF9Q2asimakAdVNfnwd2zTlrSWvq7rDrRZOzdQM9kjJexSWhOZGjR5ceOVkAi84ooNsjQ_Q6WMpnXg"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Khu Vui Chơi Trẻ Em</span>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="active people rock climbing in a modern indoor climbing gym with vibrant colored holds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ3zLsMjSpG0glEJHOQX0eOhnoVPcBbPeqTR_SRb5_6LScYwjHxwkDta0fK6APtUTezMblAKwrdx5xFRk5eu7GYsYetBmidI_2Vf6slC1qmkGXeDj47Ex5yWX6z5HbYKeYr-_z32OxReGyDHJ3Ww2rJhdxJHHHO9m2u7GKxkaFPOZKC5jmo6uhE834_KS75sYWA0o2ijLAStBUuGZDOyy5ayT7CsepkUGC-vNgnLdBT9IfOL_xXeio-DtGhfTVqE-oXb8GMwUV__8"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Thể Thao &amp; Vận Động</span>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="art studio setting with paint brushes and colorful palettes on a wooden table with soft side light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALHSrbxJA7MZjBsN7SMoDYocII7i6TX0WFw4AYxM49v93OE41SFeIUTUdlX4CqIP4sy707ai_654IdQ2GR5RxWSU_KdGuVOa2n-q7vmnIvGdqeLSNfHscObxL5DA4Aj66dFwkDZ84t_qYZgnUYLJlEBicU6JPO36_rvvKPbeXGYzfNuVCxnTFv0DzUUBZX7xulzZaLkE0zsCf4kX61xZN_NLO_POBBaZnowpc4pZxTpajkQqJpxPX4CTm3g-MAfo9O4Vtr_Sbw1Go"/>
+<div class="absolute inset-0 bg-gradient-soft flex flex-col justify-end p-4">
+<span class="text-white font-bold text-sm">Workshop Nghệ Thuật</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content -->
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Sidebar -->
+<aside class="w-full md:w-1/4 flex-shrink-0">
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 space-y-8">
+<!-- Category Filter -->
+<div>
+<h3 class="text-sm font-bold text-on-surface mb-4">DANH MỤC</h3>
+<ul class="space-y-2">
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg bg-primary-container text-white text-sm font-semibold flex items-center justify-between">
+<span>Khu vui chơi - Công viên</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm flex items-center justify-between transition-colors">
+<span>Sự kiện đặc biệt</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm flex items-center justify-between transition-colors">
+<span>Xem phim</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</li>
+</ul>
+</div>
+<!-- Location Filter -->
+<div>
+<h3 class="text-sm font-bold text-on-surface mb-4">ĐỊA ĐIỂM</h3>
+<div class="relative mb-4">
+<input class="w-full pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-xs focus:ring-1 focus:ring-orange-600 outline-none" placeholder="Tìm thành phố..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-sm">location_on</span>
+</div>
+<div class="space-y-2 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Toàn quốc</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Hà Nội</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">TP. Hồ Chí Minh</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Phú Quốc</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Đà Nẵng</span>
+</label>
+</div>
+</div>
+<!-- Audience Filter -->
+<div>
+<h3 class="text-sm font-bold text-on-surface mb-4">ĐỐI TƯỢNG</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Người lớn</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Trẻ em</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-600" type="checkbox"/>
+<span class="text-sm text-gray-600 group-hover:text-orange-600">Gia đình/Nhóm</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="w-full md:w-3/4">
+<!-- Sorter -->
+<div class="flex items-center justify-between mb-6 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Sắp xếp:</span>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full text-xs font-bold bg-orange-600 text-white shadow-sm">HOT nhất</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-bold text-gray-600 hover:bg-gray-100 transition-colors">Giá thấp</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-bold text-gray-600 hover:bg-gray-100 transition-colors">Mới nhất</button>
+</div>
+</div>
+<div class="text-xs text-gray-500">
+                        Hiển thị <strong>24</strong> kết quả
+                    </div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Ticket Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="scenic view of cable cars traveling over lush green mountains in Ba Na Hills under a bright blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-ejGgfDtubKMosdqbFs0gw6C-hOgmcsCkqE_UCL8kyjynwrkUD6N3MFi6vSzIO5m0XHS415gD3pDsI99sjweoqAujrX-gwtsQyFGpcIj47GvIJZbxsQwTi4IF0-RwzPm5C42fKpkT4J3KIfPctNz1Mas5E3hgT0kq19o2fJTOhGIpUmppb9ypGgS8HHa8uLeFbi-F99jHloKV9vUb25NES1NcWF6RnX1Mr93oJSp4m6N_hqgUJqYE3VTIrLy4V-Pg56V7keqHr4"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">SALE 15%</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="minimalist logo of Sun World displayed on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-eOlj9K6Z5HHnT1qv0JetA1xBBAwjcrFa6zDyVMgjapU9aZjPx3N_fKN_3wBPnzRYuk1VApX7WPPrQb2RnXqkVtVRge8mq3qnyq5dGmCqtXmOqExqVFCiV47DrDv9jmOeTmxBPKsQY8ZkhCqSPRwUlq7mugntdESbX5waEjzDHR7i2y4ZVP8VwGOq2Ha9lGdlnKZtviKTmPR5cxDsfh8JFRXDgyGeasfPopQg0ebJFys7OyoWQW7jAVG0Q3MiAAmNQKrF-YylfgY"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Vé Sun World Bà Nà Hills - Cầu Vàng (Bao gồm buffet)</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Đà Nẵng</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">calendar_today</span>
+<span>Mọi ngày</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">890k</span>
+<span class="text-gray-400 text-[10px] line-through">1.050k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="stunning night view of a large ferris wheel illuminated with blue lights reflecting in a nearby lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiPzXr2p5yJC7zEKNzpt6ESjcqDcm6xFflWnW7zNcLpZ7HJf_EouwSy-Kfy-HLcl93XobcQZMPzn4UWRZMCvq35FWTxxAmjcOS9Up7mHGuwzYYuv_jyvj-VABrWJwZl0604fO9HqrKJIcBZ5P_aohWnSaMubAMXhTT7F6EI0Nwe7mrUnxnZ9meJ5kamXMODPN_uB2sWxJBxgQlNzjLo28gEaYvPhtwkHKP7wBL3aTjim1OPrM7KUXw3XRLPsSK7ExygPgw3euukwQ"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">HOT</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="professional corporate logo of VinWonders with modern clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKimY5SVso9qXkd1BvLhlgly30hHylJMrxbSoNBq34Q_kfDlQsMvYDB5z82NrHPpSiMpaTO9Aawg79MyDvsUD_xfmQ2RvPRUSjFWO74KeaK4pEW5IhY9e0zTardcQiyumQ-KNVrtY8aJaiV-65N8TZ-mv-5WMbEncAhlKETf5jfaXUc3rxbp4hc6gZHvFCMykFJImxO5wu2GvaFgxt8DbK2w6jXnlbx7KgJUKKczpWRFPiDNWx4v2Qng7DyHXiF6S4uK2Rxv7LuW4"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Vé VinWonders Phú Quốc - Công viên chủ đề lớn nhất</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Phú Quốc</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">local_activity</span>
+<span>E-Ticket</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">950k</span>
+<span class="text-gray-400 text-[10px] line-through">1.100k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="close-up of movie theater snacks with popcorn bucket and soda in a darkened theater setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlOmm_gSaL0Cb9uPhEvCKDwWpQgD3OS7DcSM2JE831a-ur6eBc2bk2mEbf35FUSAw6KmHZhKPHNJAbqGjgNplnLVvjiw-D0vXZh9X5Awmt9aKvnhWlZSDbl70o8FuJRXVhFSRAZEk7xQWcO_NvJaAQldKK4yzfN_I-urNe1nLNJUjKdcPygWNfLxOszvdYpNDbr-anWFoZtnZqZj66hmfOsf7JSLDa4BykZeeoJepyBSk9BsWYAoxcQ18Md9RQfR-FwWwl6wF2-w8"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">E-VOUCHER</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="iconic red and white logo of CGV Cinemas on a bright white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8B4OBJivGO6Y-y36HvgKJXTWN0k2s-s_w8VLD0P1HGrnnlYnIROX4ec9BLzGmS1gyguePCAaD-E8J1uRkuLQirnhBnUkXZzuFnZcZX-Eg-6y9121Jzbg9dq2RqupRUwZPm3K8Gs5V1ODtLn9kCYqwvSgotbEfdgaIAH47WuD1y8CYt9q4b6WFWjpW5CcCl0kHswtardPrMTO8bk0qh5dya7xhoLAleKv-3kj0M1lFsqx5Mfdlww34FM9tmSSB1rYCbqGKE-Bxi2o"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Combo 2 Vé Xem Phim + Bắp Nước - CGV Cinemas Toàn Quốc</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Toàn quốc</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">confirmation_number</span>
+<span>2D Movie</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">220k</span>
+<span class="text-gray-400 text-[10px] line-through">350k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="vibrant indoor trampoline park with blue mats and yellow padding under bright warehouse lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOOxN1oA_Ys6JOJY4ETITb6JodeBaHnrUEDXAAfZQAnDN_nu8wjr9HiQNwRbyQKde4eVR2AQmrtkNb00kwpq1b8Pl6Zx2RMhKSfSbtH__JNtqEtnBYL0UdthCa9j14LwxVblWJb5ghlkOPiC6iF1RUz7QxQZywgJT0BfbC6_bLSRhA0aO4YOsM_YCzN7UCb_KKHCRaDllLgPTwEfFQ96q5nWFBxxwXxk_z-azxyOV_Nd_o0aRdKZhqlghP63EZB6tEFFbCoiU8KfU"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">SALE 30%</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white p-1">
+<img class="w-full h-full object-contain" data-alt="modern playful brand logo for Jump Arena indoor park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKWWpF4bi6Uov41bQlCJKhSE2CkY3jA8MVwGHazOul9dxt-ztuyYCH78qks8ZsYa-0ufOs0DHnJRdBuB7MQq_3iBK3X3cBp4nX6zgmBtRXfuScEK7m2Tgt_vhnZTZpTsvYii70NuZFmTd0jw0W0fVyO7Kcl-rHaCJZbIIbSFvWwthroPwY_1Iu9yDUewxQQuDbj2uDebqEE94XGi4Wqhy8-z-evD45OBOy-iHQ16a9xYlo0NyJgNdehJe7o1X8TSpE7PAUS725cKA"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Jump Arena - Vé Trọn Gói Khu Vui Chơi Vận Động</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>TP. HCM</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+<span>60 Phút</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">145k</span>
+<span class="text-gray-400 text-[10px] line-through">210k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Repeat for 8 items as requested -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="dramatic lighting of a main stage at an aquarium with large whale sharks swimming in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAumuI9b3u84-DfMIEgcjabdl8OmaZqhD-KSmU_oPooDQ-IoRUrP7XI13Xi4FbtMBc8qRRprue5MgiuC_283Rz6RHy5xzTCwC_VTTsBTelHuDarFBUipAalbH_I1eVygbRwal6ih_O6iQTeyEI6bzQLszLE2gAkNKgKGBiH1ZStYCH7XdTUmIOUFtMI00_xaU-nFVtjWZC-j8ykGvL1a6rKqpUq4WBxOmascP91sknrZ3tBsjxzaCpAgGR5K7vF2Hp4yomd5wcyHXg"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">YÊU THÍCH</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="minimalist turtle icon logo representing Lotte Aquarium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNbigjIOM6fDNSgzM_xINRGRTDg51ZrGyCwFh3q4K50HXmaqlSXcii5o7YgODrSoc4R043t1oNBzDoamfeaVd232J_kGJhNBDf2AszGO2upNLYRn03_2PlUNhpGPNWgJjwm20sNfZwv7v9w7XzkX2SEYjs6nWio8rRYFCD5EFamDDZ_5UQbjdDndHAnrbzNL75tfPT28OMgZBbTls5-JHDs-fGQHc6363siXhfOnIeUzerO5C_xHhJXumPDPC71UjtuLCvoRFfsjA"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Lotte World Aquarium Hanoi - Khám phá đại dương</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Hà Nội</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">family_restroom</span>
+<span>Gia đình</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">280k</span>
+<span class="text-gray-400 text-[10px] line-through">350k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="interior of a modern yoga studio with wooden floors and soft warm lighting from windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0tI4N19K6etUPNNhmCok-KFX2ZLtbrvoaPoKclvpfr_56qJcyFXaNGs2hw5bm0ZzP8lOAjTY06Itz4nMSGYRpWF7wBrBwphURk4Cf8ww52yZJHWk1eyKYY787712cOyfVoeafVjAhlCpAaqXSKWJhkzIgHdiOGg3EsR3IC2EMjq9HoFHvuDLlm_E5Pj2HTjkRJ7Mpo-jxgFqexVZy2w3spLGZb3RjY3zvihq5fPlHAyFxBOfhQIMRKqwUkzYqCijqRomRGs_4E5g"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">MỚI</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="serene circular logo for a wellness studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIp5gjHNaKAyY9mKOjykWug59FDu1Gj6gClKvj9nRERAoSw88F71gCh8ewRgBkxZWU2y38QC0X3BRs21C9sTSrEBDvD5FHXur5fAJClt8cj3UIsxGbn17AASKpd87UZtY9zJe0oUv1_pPCooFLOfXBiP9VlRl0EyH_b_NYCdmn8yomHuqmxwcVQdcueS7Rq7sGmRC0nPEwS9-_PkU_t_U7HIbVAJueJLT0YM25xNuMQnhA1yW8yJAYyr6eFqDx9EXDGiAJuCvFYG0"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Workshop Vẽ Tranh Thư Giãn - Art &amp; Soul Studio</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>TP. HCM</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">palette</span>
+<span>Vật liệu sẵn</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">350k</span>
+<span class="text-gray-400 text-[10px] line-through">450k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="happy young woman on a colorful carnival ride with motion blur and bright summer sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsafnMSgjSpHUp8BxVvuJsdgRIEvJMUw3MnjC5rZ5h5dvfBZn1lyzYnYfQrewBqgGuhWm6t6d_yl93Sau4PuNEEpX72rGBMG2E5kwaLY3Vs6csbK1a_wCzqkaFI4U8DUEu8D_eBLGYrVyH9vj5VSHEw0f0fdW9M7sVZSnS3osTaqrBOyVsYqDbi1fWIMXqfNEt8nyDiTh_NEPfhzieiUMDYxeHYTqiPPWOwtPGAJONRiFwkj98z9fUAV7Sxw5sgCmOwWqcyBIoETM"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">BEST SELLER</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="bright red circular logo for a major entertainment complex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkbqyuAYvEOomSw1LE7Ku8HSf10uJL7xyroNSGea3mBhDn4JmblI6nHCGhqmUNGA7VdKr7bFHz8m7lbpTDZsv5FS-WKQaIa2jmcbKsC-KwwRuJO-QQCknGze18dVZa5x7esDXyHd78BaG0rxUTbKIjPXGJkYfai4fJ2MjExDBVgfInPrGncmqbhRS3KZcSMHT9TlVAEssCZtYtljq8T9Mv9hRn6Ti7s7cVn0Uq4iJvMsQgLpNd2rNZXVwNy_zHjITcW_FIIIUFNgE"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Suối Tiên Theme Park - Vé Vào Cổng &amp; 15 Trò Chơi</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>TP. HCM</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">attractions</span>
+<span>Combo</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">250k</span>
+<span class="text-gray-400 text-[10px] line-through">350k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="overhead view of a vibrant blue swimming pool with clear water and yellow slides in a luxury water park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByCXblqpjO2fRXtfxLnJCIOdLAQJ1lxbZkB1cjcFbttKbpBKU8WjcMvbDHFKspbY8L0EqdpDNqzO_evgzxDjyaNtYEB1ky7OlHZmE_euiHEfyduwd1eNG8n7hymOFvuVF2GH8TxYMzHgh153nyZ8stU-XHJGOABh0jsSARh2pGCo33lMIDeizIanx6hJYh-w3-pDKT10G6oQnl8z1lPVgfwSPTqu0OQkFptAjiE8AzAv5_n0gPntynhjhVW1SKRLsUMrZRoUft5JM"/>
+<div class="absolute top-2 left-2 px-2 py-1 bg-orange-600 text-white text-[10px] font-bold rounded">HOT DEAL</div>
+<div class="absolute -bottom-4 left-4 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img class="w-full h-full object-contain" data-alt="modern icon logo for a water park brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq8utel1oJMHODnaAqNEJuLW9sQpRVoHWzlZCxXXWpSxU61xR1wMY_kLjvCsKA8X-eVJJxcfo5vvxN3WmOqcXU7E_4g4joWaeYCfj0P95XbstMHWMUIXFwE3CX9CDOInx924VL0EODGC0tS-DPBG24lHikIKWoPKBd_trXMX6nbzzpW8W8NpsgGCKoHeE-3Mhnc_9BKYlZEUxHBRQkto-WaKyRg2qzrm6JNPUzRJdGhERLnbRny9eKjZhN4qpgZyxVhMO2hVd6lZw"/>
+</div>
+</div>
+<div class="p-4 pt-6">
+<h4 class="font-bold text-sm line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">Công Viên Nước Đầm Sen - Vé Trọn Gói Mùa Hè</h4>
+<div class="flex items-center gap-2 text-[10px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>TP. HCM</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[12px]">park</span>
+<span>Tất cả trò chơi</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-baseline gap-1">
+<span class="text-orange-600 font-bold text-base">180k</span>
+<span class="text-gray-400 text-[10px] line-through">240k</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs text-orange-500 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination (Extra for realism) -->
+<div class="mt-12 flex justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-orange-600 text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-orange-600">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-orange-600">3</button>
+<span class="flex items-center px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-orange-600">10</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full py-12 border-t border-gray-200 dark:border-gray-800 mt-20">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
+<div>
+<span class="text-xl font-bold text-gray-900 dark:text-white mb-6 block">Dealtoday</span>
+<p class="text-xs text-gray-500 mb-6 leading-relaxed">Nền tảng săn ưu đãi giải trí, du lịch và ẩm thực hàng đầu Việt Nam.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">social_leaderboard</span></a>
+<a class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-gray-900 mb-6">Liên kết</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-gray-500 hover:text-orange-500 transition-colors underline decoration-orange-500 underline-offset-4" href="#">Về chúng tôi</a></li>
+<li><a class="text-xs text-gray-500 hover:text-orange-500 transition-colors" href="#">Trung tâm hỗ trợ</a></li>
+<li><a class="text-xs text-gray-500 hover:text-orange-500 transition-colors" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-gray-900 mb-6">Chính sách</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-gray-500 hover:text-orange-500 transition-colors" href="#">Điều khoản sử dụng</a></li>
+<li><a class="text-xs text-gray-500 hover:text-orange-500 transition-colors" href="#">Chính sách bảo mật</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-gray-900 mb-6">Tải ứng dụng</h4>
+<div class="space-y-3">
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">shop</span>
+<div class="text-[10px]">
+<div class="opacity-70">Download on</div>
+<div class="font-bold text-sm">Google Play</div>
+</div>
+</div>
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">ios</span>
+<div class="text-[10px]">
+<div class="opacity-70">Download on</div>
+<div class="font-bold text-sm">App Store</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-200">
+<p class="text-center text-xs text-gray-500">© 2024 Dealtoday. Tất cả quyền được bảo lưu.</p>
+</div>
+</footer>
+</body></html>

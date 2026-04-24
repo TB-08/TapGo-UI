@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdad3",
+                    "on-surface": "#271812",
+                    "surface-container-highest": "#fadcd2",
+                    "on-surface-variant": "#5b4137",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffe9e2",
+                    "on-tertiary-container": "#002d51",
+                    "outline": "#907065",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#e4beb1",
+                    "background": "#fff8f6",
+                    "on-tertiary-fixed": "#001c37",
+                    "text-primary": "#333333",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#3e2c26",
+                    "surface-dim": "#f1d4ca",
+                    "surface-variant": "#fadcd2",
+                    "primary-container": "#ff5b00",
+                    "tertiary-fixed": "#d2e4ff",
+                    "secondary": "#b62506",
+                    "on-primary-fixed": "#380d00",
+                    "status-sale": "#EE4D2D",
+                    "inverse-on-surface": "#ffede7",
+                    "text-secondary": "#757575",
+                    "surface-container-low": "#fff1ec",
+                    "tertiary": "#0061a6",
+                    "on-primary-fixed-variant": "#802a00",
+                    "surface-bright": "#fff8f6",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#3e0500",
+                    "surface-container-high": "#ffe2d9",
+                    "primary-fixed": "#ffdbce",
+                    "on-primary": "#ffffff",
+                    "primary": "#a83900",
+                    "surface-muted": "#F5F5F5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#a83900",
+                    "primary-fixed-dim": "#ffb59a",
+                    "secondary-container": "#fd5837",
+                    "on-background": "#271812",
+                    "on-secondary-container": "#580a00",
+                    "on-primary-container": "#521800",
+                    "inverse-primary": "#ffb59a",
+                    "tertiary-container": "#0096fc",
+                    "border-subtle": "#E0E0E0",
+                    "tertiary-fixed-dim": "#a0caff",
+                    "on-tertiary-fixed-variant": "#00497e",
+                    "surface": "#fff8f6",
+                    "on-secondary-fixed-variant": "#8d1600",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-x": "2rem",
+                    "topbar-height": "40px",
+                    "stack-md": "1rem",
+                    "container-max": "1200px",
+                    "stack-sm": "0.5rem",
+                    "header-height": "72px",
+                    "gutter": "1rem"
+            },
+            "fontFamily": {
+                    "top-bar": ["Plus Jakarta Sans"],
+                    "price-large": ["Plus Jakarta Sans"],
+                    "mega-menu-title": ["Plus Jakarta Sans"],
+                    "nav-primary": ["Plus Jakarta Sans"],
+                    "mega-menu-item": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "top-bar": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "mega-menu-title": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "mega-menu-item": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAFAFA; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+</head>
+<body class="font-body-main text-body-main text-text-primary">
+<!-- Top Navigation Bar -->
+<header class="bg-white dark:bg-gray-950 font-['Plus_Jakarta_Sans'] antialiased shadow-[0_1px_4px_rgba(0,0,0,0.05)] border-b border-gray-100 dark:border-gray-800 docked full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto w-full px-4 md:px-8 flex flex-col">
+<div class="flex items-center justify-between h-16 md:h-[72px] gap-6">
+<!-- Brand -->
+<div class="flex-shrink-0">
+<span class="text-2xl font-black tracking-tighter text-[#FF5B00]">Dealtoday</span>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden lg:flex items-center space-x-6 h-full">
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Trang chủ</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Hot Deals</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Du lịch</a>
+<a class="text-[#FF5B00] font-bold border-b-2 border-[#FF5B00] pb-1 h-full flex items-center" href="#">Ẩm thực</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Giải trí</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Sức khỏe</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] hover:bg-gray-50 dark:hover:bg-gray-900 transition-all duration-200" href="#">Voucher</a>
+</nav>
+<!-- Search & Actions -->
+<div class="flex-1 max-w-md hidden md:flex items-center">
+<div class="relative w-full group">
+<input class="w-full border border-[#FF5B00] rounded-lg py-2 px-4 pr-12 focus:outline-none focus:ring-1 focus:ring-[#FF5B00] text-sm" placeholder="Tìm kiếm món ngon..." type="text"/>
+<button class="absolute right-1 top-1 bottom-1 bg-[#FF5B00] text-white px-3 rounded-md flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="search">search</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-[#FF5B00] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+<button class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumb -->
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-4">
+<nav class="flex text-xs md:text-sm text-text-secondary items-center gap-2">
+<a class="hover:text-[#FF5B00]" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-[#FF5B00] font-medium">Ẩm thực</span>
+</nav>
+</div>
+<!-- Section 1: Categories Carousel/Grid -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 mb-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-[#FF5B00] text-2xl" data-icon="restaurant" data-weight="fill" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h2 class="text-lg md:text-xl font-extrabold tracking-tight uppercase">Món Ngon Yêu Thích</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Portrait Cards -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vibrant steaming hot pot filled with colorful vegetables and sliced meats in a rich spicy broth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeTndUrMXH1_zL2NiDL2lhGo-SC-1qFaBNlBitW9HquwQchrI3insdAf_DGha886od_FpfmcQd8viA6mqkEXMSJOYuA5C_eVyVxRZ0uoakd2eeGLxKN9nHbaNS46AwqVjFdcMOQwDL2kqDF9yPA79g7vCDl83ofKiwOI3QlxFegiIn_vsZ7U0L8wpp2xdDz-4Z6Vzvn2z7amC9vPlwiK_kN-kkntBVCuD6cfkqu1pzZh7YiZZea44TyErSXJUCFyvh3mBXhp5xvLc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Lẩu &amp; Nướng</p>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="assorted fresh seafood platter with lobster, shrimp, and mussels on ice under bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9zOaHw3PEGM0oSU8KB4bTD7mQDFULBlV2THpw3ijkAFaafBVphGrGwzHKd4H9jtvo9j7Iu8e_OXX-mLw_vQHSHZA4cLEIZKTJuRiDhYBGNk3gFuk2I0Q6uQaxhR694guv77QBmsJVSyVACw2hjKnbus_pu5_q3eNglF3dD_CRseVkXKamSVWPS-fpPcjRxViSDy4G0BTsokzayhMuWKGm7yoIJXOM4h-yKGKTeDOym66SDWUE4vIWGq2iSK0f1sMVY-oikfCKwj0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Hải sản</p>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="gourmet juicy beef burger with melting cheese and fresh greens on a rustic wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC54mTQcoPXVMv22xBo7SA3q7FSmnbZLZCzu9WGkg6q_cRKR9a1CnXV0sC_wil6hV6Qw7f7xyh7xYaXwCkxyOTE6W5hSaqr3zWUFwkCO1_UQrbV8gHxIUJpFmuYqbi1WbTJzbFXh4ZsNmfp_MunVMHfumfOWbbCrVUz1UZQqHouGA48zQvkuX4sSUjQm4FJgER2clu7xkGhq1Pyc6l8nsdZXlX4o-nMbBSGitPkIzC4sqkc4F3FkCHmO5LHaeDthvpKyf4veRPnnOQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Món Âu</p>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="exquisite sushi platter with fresh salmon nigiri and california rolls on a black ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1e12dWkL__Fum4gbh83kFLu7mQucygbeGPPI4Ft2xZl822Y0TGAKvjF-SnUbMFF3YdUMkutVSXZ016ELc4Nlc6VaTh3Ioj_7ipAMwrZFw-5P-6qaPVA784igDZQavvln9TZ4OEY_cTfx_D4vKoqoeca1ie0o8JTIqNi3T_qwQL5DUOhdTi2U9VJ_ghTMgQsca-1dZ4WfRHUcX6afnmf97uXKwQEPtwuBZ4xXmnCu1sOFR4oXxepQfDo8sw2jijuPxxMd_wsehTFc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Nhật &amp; Hàn</p>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="creamy milk tea with dark brown sugar boba pearls in a tall plastic cup with ice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkpfxpSGl7fCCXZxXlCaUfJWxehNADDrhEFSajwbzeagX3LaXwXXvlWVo_k0Mkd_ykHd7GkA3Xt6avPWm45ndbjte3JzLNgXRYJVk0uWuUJ4oklSiuviOQ3f4_96EiZNFhfSYFvOztm4hrejZ4pNTvD4K1caWg0wE67qhcxMry_DC4ico2cqnClT0jEvPSWP7pkRIX0HULzJ0POtZAA_IPXKZdzOfgrYrV6iDfRCUHBe1v7v26jEwH8VSMNHnmYF8LdQY_dqc4il0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Trà sữa</p>
+</div>
+</div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="traditional vietnamese street food snacks in colorful paper bags on a bustling market stall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9go-O75QrIFLMNfDE9ReOWl-0Ntk5mHZxJAiXKgbXEW6lslKl2h64BPZzDVtciCXw3b9sSckJ5yCdIIlxFpoLTBK4U0TYVwtGZmVntuzCGNC8XTYk0O7ITQEY89cO611ldukV3yOQemB-SQDbie6un3y4QMQGEAcquU3H-OWd_bZxTQh43Pkt4ZDAZ86gcRdxyrh70tvqw5oi0Jb5v0IixRyfxHKJGvt4qMu7v0kBMlf8xKGhxFB2fUA_LD6ajhyhduChKa4lVaM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-white font-bold text-sm uppercase">Ăn vặt</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Section -->
+<main class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row gap-8 pb-20">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-1/4 space-y-6">
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+<div class="flex items-center gap-2 mb-5 border-b border-gray-50 pb-3">
+<span class="material-symbols-outlined text-gray-400" data-icon="filter_list">filter_list</span>
+<h3 class="font-bold text-base">Bộ lọc</h3>
+</div>
+<!-- Categories -->
+<div class="mb-6">
+<h4 class="font-semibold text-sm mb-3">Danh mục</h4>
+<ul class="space-y-2">
+<li class="flex items-center justify-between group cursor-pointer">
+<span class="text-[#FF5B00] font-semibold text-sm">Nhà hàng - Quán ăn</span>
+<span class="text-xs text-[#FF5B00] bg-orange-50 px-2 py-0.5 rounded-full">342</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer text-gray-500 hover:text-[#FF5B00]">
+<span class="text-sm">Buffet</span>
+<span class="text-xs text-gray-400 group-hover:text-[#FF5B00]">84</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer text-gray-500 hover:text-[#FF5B00]">
+<span class="text-sm">Quán Cafe</span>
+<span class="text-xs text-gray-400 group-hover:text-[#FF5B00]">120</span>
+</li>
+</ul>
+</div>
+<!-- Locations -->
+<div class="mb-6">
+<h4 class="font-semibold text-sm mb-3">Khu vực</h4>
+<div class="relative mb-3">
+<input class="w-full border border-gray-200 rounded-lg py-1.5 px-3 text-xs focus:outline-none focus:border-[#FF5B00]" placeholder="Tìm quận/huyện..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-gray-300 text-sm" data-icon="search">search</span>
+</div>
+<ul class="space-y-2 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
+<li class="flex items-center gap-2">
+<input checked="" class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">Hồ Chí Minh</span>
+</li>
+<li class="flex items-center gap-2">
+<input class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">Hà Nội</span>
+</li>
+<li class="flex items-center gap-2">
+<input class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">Đà Nẵng</span>
+</li>
+</ul>
+</div>
+<!-- Price Range -->
+<div class="">
+<h4 class="font-semibold text-sm mb-3">Khoảng giá</h4>
+<ul class="space-y-2">
+<li class="flex items-center gap-2">
+<input class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">Dưới 100k</span>
+</li>
+<li class="flex items-center gap-2">
+<input class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">100k - 300k</span>
+</li>
+<li class="flex items-center gap-2">
+<input class="rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00] w-4 h-4" type="checkbox"/>
+<span class="text-sm">Trên 300k</span>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Main Listing -->
+<section class="w-full md:w-3/4">
+<!-- Sorter and Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
+<p class="text-sm font-medium">Tìm thấy <span class="text-[#FF5B00] font-bold">542</span> kết quả</p>
+<div class="flex items-center bg-white border border-gray-100 rounded-lg p-1">
+<button class="px-4 py-1.5 text-xs font-bold rounded-md bg-[#FF5B00] text-white">Gần bạn nhất</button>
+<button class="px-4 py-1.5 text-xs font-medium text-gray-500 hover:text-[#FF5B00]">Bán chạy</button>
+<button class="px-4 py-1.5 text-xs font-medium text-gray-500 hover:text-[#FF5B00] flex items-center gap-1">
+                        Giá
+                        <span class="material-symbols-outlined text-xs" data-icon="swap_vert">swap_vert</span>
+</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="traditional taiwanese hot pot layout with thin sliced beef and simmering broth at manwah restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8vf5Zx3MGj4Yf0E7o1S-ilHkwZCgyvGrPo9zMKQ44xNv7Y6w5U5zT8_sJ_W8yAz1SHyBqYh5EJwCiGu0MtROvGyxHrMllIQ07yhrFunIoVkJpBT9pkhP2xLNd0zA-VhjJEoGT2QeiQDyAtI6oEbi16WEo2KPpbc1ZXDxzawnf-14a7q_oho7Dc14eLvK-VV8mHOfw_uaDoqglrR22IhZ1ctgRhAXKj8ey7xBXyyIkG4KpjO3UIMkC2PbK3fLjMQcyV57r0ZAmLY0"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 50K</span>
+<!-- Brand Logo Overlay -->
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="Manwah Logo" class="w-full h-full object-contain" data-alt="minimalist logo of manwah restaurant chain on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_SbF7bKD4sF8sFwl4l9OtO7MBTrXdbWpMlOUGyjf4C5X6MRtnhrmrIHbA5SU_rK2oaEtela73kjfCf6WXzC1xNyi_P90GX472mwNTX5he5fSQXxjUbnadhgC4_JshqGxVa2Hr9X46tjgsk5SGmU9WRQ4eTgFxgauXyHCKwaLID4uV8e-Vw0C6paCU2_9L1H9hDJ3sK8Va1Ul1RDPEbOHXgdCsNolZO1Nclc7wlie16ljUitLGvTcfskSV66gzuGzz-W-vqCxXD0c"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Voucher Buffet Lẩu Đài Loan Manwah Toàn Hệ Thống</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Quận 1, TP. Hồ Chí Minh</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">349.000đ</span>
+<span class="text-xs text-gray-400 line-through">429.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-gray-400">(500+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="korean style grilled meats on a sizzling charcoal grill with side dishes at king bbq" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmv4sYejZDZfGhDFUAjPbBAtBov2Q1sOVFAjDM22rUMFWImQrjCLobNHAVvJe9SxLD7xZdQH3nO3eD-sd12-IH7uys80CvlYAwAH7CBIXKbjWK0RvF8diqhprFchjTixZjAlPox7gqJ7puVdbQZGbWE-ZmJZsPmrIqj7w_KwTEZ7oeOt1CZsl0KByhefg1NdjYpUzJuGE8L_3qNDZSKBO059qW5uqDH8uBHMKd3k-esRbMfYY4DCC4VrTldrlI0heyQZHerBXZZZg"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Sale 20%</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="King BBQ Logo" class="w-full h-full object-contain" data-alt="circular red and gold logo for king bbq restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBitDJlrAVPQ_kjtU1THbO0cDkm2ar1UvEHhRiITJ-9wloR0F39lvCyCpQ9ONp9vRIKXbvklvp_1PBDO415DCKqBQU0Zif1cdYYYM76zZnRbm7tBSnGQYm5OPhRy0zAV0ONk4zraM8h1z62y73PRjx66PCbAdnuv5rau5UB625aSHLPK0YXo_IjlPeDmlQp7vuL-zQZdi8NdqMWOsYqdxuyeSgkLna95kc2NQlI_mYOYkWhFeAecnWZbkLeyjkUs6-Ue4bRfxtOeMA"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Thưởng Thức Buffet Nướng Hàn Quốc Thượng Hạng Tại King BBQ</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Quận 7, TP. Hồ Chí Minh</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">229.000đ</span>
+<span class="text-xs text-gray-400 line-through">299.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-gray-400">(1.2k+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="close up of a golden cheese pizza with pepperoni slices on a rustic wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ZJ3dJC5dCVfYHWkZPf3sE726WFnrnM_6Hwm9knkpmpNwvVP50GLY5oSN2qlBGq88CP6wGgbrG1y6peK7SvH7eanTbBiNZPc3THYopLRZVEkXpCt7DY-gLmACHbtQWWxB1_jQ6YvzttmvSK2srdUQ4Zgu_-T-i5pS_jp82VfRxzSzU1Cplh0ILVq9yQLYTyCy4BM7GQ51nX_UIL8D3y5Ggoo_0rW-3N1UyaI6fM_U41lR3fC50jSx7bZAIvYl0Kv_T0akR7p8B3Y"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Sale 35%</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="The Pizza Company Logo" class="w-full h-full object-contain" data-alt="brand logo for the pizza company with green and red colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD05IaaNYgnrGcDEO5YKYCjVpZfcpBhylK2fjxH6I5FRbcFL_nFNlt0qRfUPsLOPYkINiM01E30kKKZEU6bFUqf4ZYAPmmD3QRa5b9r9eakodHy0Vo6NX5f8rVKoBNmy543gLEa7c44TF3SICCw-QOKthj17MhKLzci5q2RkzzjYhaCKGItQ6VG4Dns2D_y-QtlchYZHa4VBTD3Mke7YnESg7Stkq57tP1As8umExXCZDBSzmRhm_-KwVmF9r7LzXwgJmv85mK9uQY"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Voucher Tiền Mặt Giảm 100K Áp Dụng Tại The Pizza Company</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Toàn quốc</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">65.000đ</span>
+<span class="text-xs text-gray-400 line-through">100.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.7</span>
+<span class="text-gray-400">(800+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="premium sashimi platter with salmon, tuna and sea urchin beautifully arranged in hokkaido style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnpoQSRpzP0YeUu9UwNr2tpcM4neAC4G6sPMOImUs0CxX-L_KBAjhVvfzoua5cYnwP9FbzQHv14wIfFdDZHDE1L5YSg8q8omuLEVwp9EvN5k9CGOD8rsSqkFajjrTI59sECFG4zq49vYXYmxW95SxVXksQU7_h1gWm6sLrtwJYvEHh7X2R9U4qAAv8qn9VAP0QXp2Fxo3_HID3ZZMD1YYrVRdHU4aJQVGXUPGjahF_SDU7TXJU0CQH43QB9Lbq886GtULMlCsvC1g"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 100K</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="Hokkaido Sachi Logo" class="w-full h-full object-contain" data-alt="blue and white japanese style logo for hokkaido sachi restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1qsOu_s9MvmKFjnPD-ztOMbCuGr2EHlLqssqCRdbwH37yt4hU6zVM0vnNzzR0KXcj3kCY3Z4R9wM5EsIjmCOcKPj_KsgJqOOwwNUTcRm6ep452nUX0eEiw7RxMSa_b6W8_kzZUhtjwSGEaRb68qHkzW6KU7jfqa7zH4IdsG6411NG-6rUjX1qF928jRc69c804ZY_5GEjXxLZvcd8wnLX0_I5XoWmn5rcmYGolF6r8-frnigavcyVrYupf-iRcx8BGIOKpxcAwEQ"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Buffet Sashimi &amp; Sushi Cao Cấp Tại Hokkaido Sachi Toàn CN</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Quận 3, TP. Hồ Chí Minh</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">599.000đ</span>
+<span class="text-xs text-gray-400 line-through">699.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-gray-400">(450+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Repeat for rows... but will stop at 8 for layout demonstration -->
+<!-- Card 5 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="various bamboo steamers with dim sum including ha gao and siu mai in a tea house setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaYwjF_somIqG5PQEsQ2agrm0YtFyNG1tKgfh1ZwOcP2mtlFbhvKuRRpKcC4aLeGNBTuIh4ptqS2u8xn5sS9wLLVANGR650hY3HVh8pkgibU8PJKNrU5qlzB4hL59IHbWdBLJN2jJriBL7Yn1j82om3fdFoEdoWj4YQcg0rKx64LdA0NynY7A7pkOh_bMDGs7je5Oqa6toKcq85d_8F4owgW7KSppIScg8RZsbaE33V0Nl2j4sEsBvgZDadqHdiyisU2W5E8eorh8"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Sale 15%</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="San Fu Lou Logo" class="w-full h-full object-contain" data-alt="elegant red calligraphy logo for san fu lou dim sum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcW0sPtUYVcGv2_ml7C7CxXiZeHu2xcoXua4bmblR-7-9X6VseiKS8zNOK9eH29Jrd2K0W0ae-pLfYBCCebTK6w4U5s2Xn78HYf1-FjkhdQxAty6vbiQEOsko-PdT0yVLnRkvEANL2NVjRAxkW7h8T1jnj3mb9P2Q5aBwqlr0kFe9FsqXOXJCrpv0z2TREBMAtb4jU6aNgBgJFuFV6opqAh7JUpIr0WRu1EB8-JLexymVsjmcFJygXHoi8j9RJDLBM71Fq7Rn5QAQ"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Thưởng Thức Ẩm Thực Quảng Đông Tại San Fu Lou</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Quận 1, TP. Hồ Chí Minh</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">255.000đ</span>
+<span class="text-xs text-gray-400 line-through">300.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-gray-400">(920+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="perfectly grilled medium rare ribeye steak with rosemary sprig on a black stone plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMvvsx-NU-g8ecSfxjSDHbijBO469I-rHWjwAqns1U0ItqTbstwXd4cPn_-S9JYIIh2dqkksCJCEt4Rke8XsR6FaBXRuMT4GlYtazmk6CdBYwRH55Ic88Ns45aIieQ4rDccqDedBy2y02VPYzbW9R1Q01ydgVNGCjtyQWg-2iXcgdHxdRgF08X0W5vK_3eMFGuuTd6qvKJACRPNfOaeKs4vFxofBCPTZuWMQkBOKjp_I4vWMh6XkfPR-NeWSrIhGNxNvKNW_RCayg"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Flash Sale</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="El Gaucho Logo" class="w-full h-full object-contain" data-alt="minimalist cow silhouette logo for el gaucho steakhouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe74IE0GNsWic2f_0ad6EiZoqebIuYVA0aIdpqJCcIAV_ety2lOhauksXG68mbXXrX6qDVk-Zebiq2lkSxnlZWraN_9OOOXpO9UfbpVYbj6jokF2zUbZvystOGWAadbRycvyfS36Sq4z-ugPsa1gCnf0xUkacDSa07sZnZi4AvzOcqqywfPcTXX-1a4hWhFG1uBbj1qKZwK3Oi3R2ubZCaSTgPhJ_XfRJaW6zzRki55hzBNizUOMYE2evvW_aT45tXodxxCcQmbTc"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Set Menu Steak Sang Trọng Cho 2 Người Tại El Gaucho</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Hoàn Kiếm, Hà Nội</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">1.250.000đ</span>
+<span class="text-xs text-gray-400 line-through">1.500.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-gray-400">(150+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="shabu shabu boiling pot with thinly sliced wagyu beef and fresh bok choy in a wooden table setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuswxc798PCwrKEEcDvDloSZ7JHLvQGUoedFbd8DT2Tei-nGSSiiib9ohD5IKdxGB3nf0ODrsax7rdrGsRUj0uoyWKKI7nuY0n26Ft-1IrsuMV_9Xfl6Q3y47jsh4FAbJha4l-nO037N81TXJcRlEkLitVMmukkxlLuEeZ0tHlpIyavIJnwKLyFkhwKdxnbArkJOwx1CGJTVVYdBUCh_MgX9quurO3Ka9z0N-pWIykBW9-BW-6EaXdo9GcUvgVfspEw_geVoiPxJg"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Sale 50%</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="Mo Mo Paradise Logo" class="w-full h-full object-contain" data-alt="black and yellow japanese character logo for mo mo paradise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6HAcYDrQ0vI8gPGm1bQ54cMzasV12UKRpL7WrqWv-6Dhjiwx0javv1xpBa7FEB-1a_SLhvH_F1J0lhLOQI-S3Z_2kr-M2re7w_hWkHShs3yBEqxoqdYC0XVqpflGqDU6rS5GmIwqzfk1ToBKKPyiPbimz3FY_knIoHinfZ6AHt6ghbUpp7yiYY8QpBOoX56q641Bm-XEsD3_qal4r4jKiIEFKHM-Z4O59EvnVEAl7M2tZixA8rWLFWh5ZMRio9whGGDRLBVaI2Zw"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Buffet Su-Su Toàn Hệ Thống Mo Mo Paradise - Không Giới Hạn</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Bình Thạnh, TP. Hồ Chí Minh</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">199.000đ</span>
+<span class="text-xs text-gray-400 line-through">399.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.6</span>
+<span class="text-gray-400">(2.4k+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="latte art in a white ceramic cup with coffee beans scattered on a dark wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxkN4lfyKwKkoMFfkEROZsXDvIqXqsPI9D6pSSL_zX-TDG-XyfD36w2Fpw-c4Vx6_ekuUhdjCWk9pmX9F--GD8Nl5FvGvZRjgAwFYGO3s6sfmtk7O0l74iLWrNYAkhX_qT2sW5JzqbUtHy633oNa3thiS07DAJa1Man11RSVFhhrb0Fpep-FI2d6HTBYCi7ND3UaH43Ahj8fJnetHnPz3_JYL38eD47oLDfD1yV-6kpw853AgbA6Rn9Gv48sAC9SFHaaD9SU49g_I"/>
+<span class="absolute top-2 right-2 bg-[#FF5B00] text-white text-[10px] font-bold px-2 py-1 rounded">Mua 2 Tặng 1</span>
+<div class="absolute -bottom-5 left-3 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-md bg-white">
+<img alt="The Coffee House Logo" class="w-full h-full object-contain" data-alt="modern orange and white typography logo for the coffee house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSWyNWmJ2rVq0ugbLGQ1kvxHUzh1mEL3jrAgqeAapNL83AkhfqtLuNKVrbbQ027pqR1k5kHGDwYdY5i87ci6eQjILKrWnIa5lsY5DyNGT1_kMwPeLms3XTcL0uG4_4dgbaECryrZ4I5eNhnySNiAvX33BRMsqQgnMLFgD-XOhC4aYwkths_hGWrRIo6owlWlMium1RLjHXacUKUspHA6hxhSW2fNgpotkAWhlWoEKYmt4fNs7t52RrdcxJwqzlM1tzRi-px65PW38"/>
+</div>
+</div>
+<div class="p-4 pt-7">
+<h3 class="font-bold text-sm line-clamp-2 leading-tight mb-2 group-hover:text-[#FF5B00] transition-colors">Voucher Trải Nghiệm Thức Uống Mới Tại The Coffee House</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Toàn quốc</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-2 mb-3">
+<span class="text-[#FF5B00] font-price-large text-price-large">45.000đ</span>
+<span class="text-xs text-gray-400 line-through">60.000đ</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-gray-400">(3k+ lượt mua)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12">
+<nav class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:border-[#FF5B00] hover:text-[#FF5B00]">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#FF5B00] text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-[#FF5B00] hover:text-[#FF5B00]">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-[#FF5B00] hover:text-[#FF5B00]">3</button>
+<span class="px-2 text-gray-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-[#FF5B00] hover:text-[#FF5B00]">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:border-[#FF5B00] hover:text-[#FF5B00]">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-900 w-full border-t border-gray-200 dark:border-gray-800 mt-12 font-['Plus_Jakarta_Sans'] text-sm">
+<div class="max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="space-y-4">
+<span class="text-xl font-bold text-gray-900 dark:text-white">Dealtoday</span>
+<p class="max-w-xs text-gray-500 dark:text-gray-400">Nền tảng săn deal hàng đầu Việt Nam. Cung cấp hàng ngàn ưu đãi ẩm thực, du lịch và giải trí mỗi ngày.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer" data-icon="youtube">video_youtube</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-gray-900 dark:text-white">Công ty</h5>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Về chúng tôi</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Tuyển dụng</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-gray-900 dark:text-white">Hỗ trợ</h5>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Trung tâm hỗ trợ</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Điều khoản sử dụng</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Chính sách bảo mật</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 py-6 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 dark:text-gray-400">© 2024 Dealtoday - Nền tảng săn deal hàng đầu Việt Nam</p>
+<div class="flex items-center gap-4">
+<img alt="Payment Methods" class="h-6 grayscale opacity-50" data-alt="set of small grayscale icons representing various secure payment methods like visa, mastercard, and digital wallets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmgE5MlWW-SKU7xd0hBjdeM_yuCOOyQnWz1gH2p3AyAz-hNgSi7daILNkRXreTEoWCgUANqfNweMbalrlRJv_CkjJdY_bEyBmtHKYAkam-87S8bh4HyRmS1r1KMGIFy5ufAUyGrH2fg4Yi06DdsPg0puWAIXK-KwydvwSBpqvseDrKB88vL4dVifFxyFcMZkD_qFM9dJ0y8_qH7gTvdTEt1YCFMZlBI2UQGqCPKXMOnbxScw8O9xnOnRAtkLuOjL_AFYkgYHA_JRk"/>
+</div>
+</div>
+</footer>
+</body></html>

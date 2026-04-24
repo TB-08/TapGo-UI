@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sức khỏe &amp; Làm đẹp | Dealtoday</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ffe2d9",
+                    "outline": "#907065",
+                    "surface": "#fff8f6",
+                    "surface-bright": "#fff8f6",
+                    "on-primary-fixed-variant": "#802a00",
+                    "text-secondary": "#757575",
+                    "on-background": "#271812",
+                    "tertiary-container": "#0096fc",
+                    "secondary": "#b62506",
+                    "on-secondary-fixed": "#3e0500",
+                    "surface-tint": "#a83900",
+                    "secondary-fixed": "#ffdad3",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#fff1ec",
+                    "on-tertiary-fixed": "#001c37",
+                    "secondary-container": "#fd5837",
+                    "outline-variant": "#e4beb1",
+                    "primary": "#a83900",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#a0caff",
+                    "surface-dim": "#f1d4ca",
+                    "on-secondary-container": "#580a00",
+                    "inverse-primary": "#ffb59a",
+                    "surface-muted": "#F5F5F5",
+                    "tertiary-fixed": "#d2e4ff",
+                    "on-primary-fixed": "#380d00",
+                    "inverse-surface": "#3e2c26",
+                    "surface-container": "#ffe9e2",
+                    "text-primary": "#333333",
+                    "tertiary": "#0061a6",
+                    "on-surface": "#271812",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "on-primary-container": "#521800",
+                    "inverse-on-surface": "#ffede7",
+                    "border-subtle": "#E0E0E0",
+                    "surface-container-highest": "#fadcd2",
+                    "primary-container": "#ff5b00",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "status-sale": "#EE4D2D",
+                    "primary-fixed-dim": "#ffb59a",
+                    "primary-fixed": "#ffdbce",
+                    "on-tertiary-container": "#002d51",
+                    "on-secondary-fixed-variant": "#8d1600",
+                    "surface-variant": "#fadcd2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#00497e",
+                    "on-surface-variant": "#5b4137"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "header-height": "72px",
+                    "margin-x": "2rem",
+                    "stack-md": "1rem",
+                    "topbar-height": "40px",
+                    "container-max": "1200px",
+                    "gutter": "1rem"
+            },
+            "fontFamily": {
+                    "nav-primary": ["Plus Jakarta Sans"],
+                    "mega-menu-title": ["Plus Jakarta Sans"],
+                    "mega-menu-item": ["Plus Jakarta Sans"],
+                    "price-large": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"],
+                    "top-bar": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "mega-menu-title": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "mega-menu-item": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "top-bar": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] font-body-main text-text-primary">
+<!-- Header Section (TopNavBar) -->
+<header class="bg-white sticky top-0 z-50 border-b border-gray-100 shadow-[0_1px_4px_0_rgba(0,0,0,0.05)]">
+<div class="h-[72px] flex items-center justify-between px-8 max-w-[1440px] mx-auto w-full gap-8">
+<!-- Brand Logo -->
+<div class="flex-shrink-0">
+<span class="text-2xl font-black text-[#FF5B00] font-['Plus_Jakarta_Sans']">Dealtoday</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<a class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Hot Deals</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Du lịch</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Ẩm thực</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Giải trí</a>
+<a class="text-[#FF5B00] font-bold border-b-2 border-[#FF5B00] pb-1" href="#">Sức khỏe</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-[#FF5B00] transition-colors" href="#">Voucher</a>
+</nav>
+<!-- Search Bar -->
+<div class="flex-grow max-w-xl">
+<div class="flex items-center border-2 border-[#FF5B00] rounded-lg overflow-hidden h-10">
+<input class="w-full px-4 text-sm focus:outline-none border-none" placeholder="Tìm kiếm dịch vụ, thương hiệu..." type="text"/>
+<button class="bg-[#FF5B00] text-white px-5 h-full flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+</div>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-5 text-gray-700">
+<div class="relative cursor-pointer hover:text-[#FF5B00] transition-all">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-[#FF5B00] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</div>
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:text-[#FF5B00] transition-all">notifications</span>
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:text-[#FF5B00] transition-all">person</span>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-8 py-6">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs text-gray-500 mb-8 font-medium">
+<a class="hover:text-[#FF5B00]" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-gray-900 font-semibold">Sức khỏe &amp; Làm đẹp</span>
+</nav>
+<!-- Section 1: Dịch vụ nổi bật -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-[#FF5B00] p-1.5 rounded-full text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">spa</span>
+</div>
+<h2 class="text-xl font-bold text-gray-900">Dịch vụ nổi bật</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+<!-- Category Cards -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="interior of a luxury zen spa with wooden textures warm candles and professional treatment tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCorSLB9j6DoCeFC9gsYMQOUNQh3qaR3-3cM_IIpHy1zI1s7lPRcb39e4_bHYVt9-R1LB1UyHj08aav0nIvdxaMzeZcZGk_xOy_dZv1a2cDK3Vx6tjA2Ebxn9_P3uU3-lbTm1I7Duq-kl_5bZ4RqXnDCl8qhBe1nb4EtqIcL_x8df90kiiECtg_oIHGT2B4ZnaoeDa4HqX3ZvQur8P1Xrbq0HdNw68-QROOOEPCVXD2TtzevV2sT2vLi8Cx2Sls5HYePcZGbKVl9Hg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Spa &amp; Massage</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="close up of premium facial skin care treatment with aesthetic professional tools and organic products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeStVkl1yjHJYlNtJM3gxqbqWd5glVts1x_9SCROSLTqGWqeraG6lag97F-9RtALxFLApvK6MYERLBlOWc7fEyMAbzsgGvpxZWAvUdSRgzhyjiP2ckvQicHC46uGoINLRrj_waBEJHQovMsZ7npyPmlwYM7utspy2JRZQ0V9ZAXQrwjsCgGWRVwxF5CMFDfzyV9u4Ubb3v18KKKqIOIy5RWNIw3da9tVV0hO7oreLyXAdsBSKMsKvuVF2BXkv0JDX5w5OyjLdUh4M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Chăm sóc da</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="modern dental clinic interior with professional bright lighting and high tech medical equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Dt9gnnutk6hPe5EetXXr0r7dAbktuaEIuJHSu1xXy1N--l0A4pFAd4uSXgx6yPBEhQKjCZWDLC1Lmue5y0CYnPBkf_qFRB_L9e5_6iQxt7oaGxyLWOT6L9MQ2HcRfIVgeVPogKN3migAvmbk_vta5f1c9EK6bgG0DbKf8Xd-p9Zi86Ux4FOqzUibaXVyuQooQ2DavXerV2LKbQckXfOjhfoQmFH1_slRblcYY-Q1XHF9cbB868j1fC6CWKYlKu8PorsKZ3gk9Q8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Nha khoa</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant beauty salon interior with professional hair styling equipment and stylish nail art stations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Ki0Zcck9Bb59PZg7ELQMMj0kRv9KO_ZdZXMWBY-grGTRsRARciNjUz5dgDrMjdvvyK86rqa247uSv9zFNRV7DcpC-5KmMtEDYNzQHafggaXsN_pOuZvMC_Ua7demvVOsGiQE3Y4sYb8P42edDpmgPfJxFh8SyDJUewBaAkgyV6PB8Stjqv5wqyCpq_Sc3dfd2EJ93ZmWHOvCPzN6w-Gfwp3f_sKGfNZujd-3WXyYhThRhG7Sk7dsFMo6e0rJe9DVLxfhu4pQkHc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Hair &amp; Nail</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="close up of wellness massage with smooth hot stones and aromatic therapy oils on soft white linen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxYU68dBlEMb2rj1P4_9dlwOhHrOY7gGsSHX7vQVFeF9y4hNb9Wu-WARunKOL6YKBNT-vKGWnOOwWmnxh4lrx7GhNl5iZHvMaCEUINO6WkCaqyIGy7fP8LoiMeViFQgtC9zGVp3nUNnsfBFCHCdcu_IgNwzh-ZLUx3UR1NEngEezHj118uWEAAUAV74kJ1ANechl7c0NisumY4arg2u1G4dPwawC5HwaV2g93SRYdPBiJvlkfHrClt1cgO_9Fv-iuaOMHQs6l2u0A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Chăm sóc cơ thể</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="peaceful yoga studio with morning sunlight streaming through windows highlighting wooden floors and mats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3eU9lM3TabHCHGv8YvMHu9sajAKXGcYNEh_YRmIdRwfPhquDm_9FDGI6Cojn8oSY8E-dcP8v8kYZzHZgFUeOxHG30ZJ6ilVxruwZ-z-yGrPF8flVGE4aamb4cJE8S41AmdhDJXqiiDqaIPACqPs2AkJVk4Rc1TSycHrHFTWFjpZzjxjXndHOeHcWsieJDYbdAxhzsCApx_LM0AfAbfvzwRgUcWKMk_S6alilWyOJQ6VtWn0abn6n8LLtdiMSfAp8dkN9snK--xPY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-0 right-0 text-center text-white px-2">
+<p class="font-bold text-sm">Gym &amp; Yoga</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: 2-Column Layout -->
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Sidebar (25%) -->
+<aside class="w-full md:w-1/4 space-y-8">
+<!-- Categories -->
+<div>
+<h3 class="font-bold text-sm mb-4 uppercase tracking-wider text-gray-500">Danh mục</h3>
+<ul class="space-y-3">
+<li class="flex items-center justify-between font-bold text-[#FF5B00] cursor-pointer">
+<span>Spa &amp; Massage</span>
+<span class="text-xs bg-[#FF5B00]/10 px-2 py-0.5 rounded-full">124</span>
+</li>
+<li class="flex items-center justify-between text-gray-600 hover:text-[#FF5B00] cursor-pointer transition-colors">
+<span>Chăm sóc da</span>
+<span class="text-xs bg-gray-100 px-2 py-0.5 rounded-full">86</span>
+</li>
+<li class="flex items-center justify-between text-gray-600 hover:text-[#FF5B00] cursor-pointer transition-colors">
+<span>Nha khoa</span>
+<span class="text-xs bg-gray-100 px-2 py-0.5 rounded-full">42</span>
+</li>
+<li class="flex items-center justify-between text-gray-600 hover:text-[#FF5B00] cursor-pointer transition-colors">
+<span>Thẩm mỹ viện</span>
+<span class="text-xs bg-gray-100 px-2 py-0.5 rounded-full">95</span>
+</li>
+</ul>
+</div>
+<!-- Location -->
+<div>
+<h3 class="font-bold text-sm mb-4 uppercase tracking-wider text-gray-500">Khu vực</h3>
+<div class="relative mb-4">
+<input class="w-full pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-[#FF5B00] focus:border-[#FF5B00]" placeholder="Tìm thành phố..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">location_on</span>
+</div>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">Hà Nội</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">TP. Hồ Chí Minh</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">Đà Nẵng</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-bold text-sm mb-4 uppercase tracking-wider text-gray-500">Khoảng giá</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">Dưới 500k</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">500k - 2 Triệu</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-[#FF5B00] focus:ring-[#FF5B00]" type="checkbox"/>
+<span class="text-sm text-gray-700 group-hover:text-[#FF5B00]">Trên 2 Triệu</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Right Content (75%) -->
+<div class="w-full md:w-3/4">
+<!-- Toolbar -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+<p class="text-sm font-medium text-gray-600"><span class="text-gray-900 font-bold">124</span> kết quả được tìm thấy</p>
+<div class="flex items-center bg-white p-1 rounded-lg border border-gray-100 shadow-sm">
+<button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-[#FF5B00] transition-colors">Phổ biến</button>
+<button class="px-4 py-1.5 text-sm font-bold text-[#FF5B00] bg-[#FF5B00]/10 rounded-md">Đánh giá cao</button>
+<button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-[#FF5B00] transition-colors">Mới nhất</button>
+<button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-[#FF5B00] transition-colors">Giá thấp</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="peaceful spa treatment room with bamboo decorations aromatic candles and stacked warm towels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9HDyXragruq4VepYvvr9Ul3KEvUBZkP1bAQuiZAO-sRsH3_ohCmO8co1jGjMXHPDtzuN1BCTkyvXctxv8stRSXWtUJmhPWreghGqBPBGEDkml2J72Hu5hrzr5D9nR--eCEI8oD2-8OgwJNsRnrzSso8zqHqcwT5WRHtcKDohd6I3ItoTLLtUT4SL-I-5d9c_tQHMWVBuM0X7haaIUfWSdiDmDJJ-dX09OT67voPyOC_pRi7w0x4ubGyat56T-1gAHQntTytewfeY"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 45%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="minimalist logo for premium wellness brand with abstract floral symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTu3Pcv7AZ_4xjdGhwdoAQ9UO9kUQd7dZ8ciS4OO4eun9l3opd0SDwnCEI6x37ttvFIYG7KzcrhOnp7sTTqvXHV9eC5Kx2jJUUdYxSCBK6_h2CgKssEWMnjtmrgwlgortWCvniUdkRbA38CE_5QnScOgUwlLee_jNm0NsMZeO5pyvpWIgpjgj3jd2CpaUDgP0v_AsfN6kVbdnzssQuyYo_asKAMyuTj3M_hxVB7n1mHYwBgy8rDA2pL1LVMIlMl8keacX-ANvsgLU"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Massage Body Thụy Điển &amp; Chăm Sóc Da Mặt Chuyên Sâu</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">Sen Tài Thu - Thái Thịnh</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">399.000đ</span>
+<span class="text-gray-400 line-through text-xs">750.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="aesthetic close up of high end skincare ritual with pipette and luxury cosmetic glass bottles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPA_VDI69MngYr-HR4O_hbdpze-XKpFtyNim8OpmYo-g0G2fa2dzEhke3gl21ZDpZAA5WP6mjX97vC1wV6EAZ1OC_eSt3zDmPmOA5TfgZ9SZs1bBddf_7zDU0fk2ZeFiWhG7K6xqdYxF8zf0Ecpj54Fs8Ph6b3pZma8VFY0oe21zVC7VPN-p3KZ4BlpFa1t-0LOd4pmI1O7IIH6nzRVi7esbear4QyJ03VpJDdiSXTiJAconfyRdWoY5EiEcXy1HXwDZ19Jt6ojOo"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 30%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="professional cosmetic brand logo with elegant typography on cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4qQ65MhjhrLkpSTGv6qPSjr2SCA5lAp0EeiCDHYUZDmo72gfxXNv3860AYFlyNsAxPs1HKjOkjZsX5xgOftqR7V4QIkoHTBzxjIf0XWB6r7KD_hbJo32n-FGCx0IcMTIKh9q9I_B0kmMstINaL4kojVCWiUv7aPEA_IImWekpXvw-P2wcGwDx7GOBI0-V1T9vkUW9lFWrLjkhBXnbaKB2CiUEXKbEeseiszZxrURyWsViK9ZIyxRSYZ8_kpiXxhYYsQ_gyaMgAY"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Liệu trình Trẻ Hóa Da Công Nghệ Nano White</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">TMV Ngọc Dung - Quận 1</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">1.250.000đ</span>
+<span class="text-gray-400 line-through text-xs">1.800.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="holistic wellness sanctuary with greenery soft natural lighting and warm wood accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDCZmCyR0Tzu7gsA6J3UXUDv99ZeeC429fqwWTIEQF7N2Ix1vkBS9GiAZPGzAcE7EyIUwiOSp-YK7f1urXUbQC3FM5bGTOdJFXLJi0In4PDiHZRqO8Qx4-ZT_i6Of2EBxuucDL-MC3HXrS47LboGXJOqsofFttmfeFbvipz_6POsB-dszTwkd3busbwR7JH80NhvqD6pwPsV3zrYh7NCzQDNoI-KXoIjXGeHXAi_Mjjxu3gflzqlm0SjKS_7BjrItpvWMvUwUR2g"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 25%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="sleek modern dental logo with clean geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWcOy8Y_hgcYbfT2_zg58UfodVPPL8XxGHMz1rlC8_kLBCelBnu5Yx6W3uNlQy8W026AwVILSWRCayAXj_ya16aETfSqk9ZKsNDrf7t-5PKCiiuyALfdKuqUHzPd8vHldnyf5S_LX8no1UuDqDItKurBo7JqMYvNE16a8g95u-gle6GRm8czEHv095XcSh70eJmsSTcTB_L5tIIvYmGBYt1RvZLwtZSNy9rQaqHBmsqmqagvWslbcWqagX7cxf9PWyG-ZBTUdHyKI"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Tẩy trắng răng Laser Whitening Plus - Không Ê Buốt</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">Nha khoa Thu Cúc</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">890.000đ</span>
+<span class="text-gray-400 line-through text-xs">1.200.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional nail salon display with vibrant colors modern furniture and organized premium polish collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPWFXsrpNwov-fCRc5TX8ZdcQnanhH0u8txtEcnBupO1UELx6YIRuvW_bvB9iX4NmOEQHklGHiRkElcVLFEUqp6dYii0vs-_gm8m8bgchucD-o6TnwJ-hsdvm3zz_oGngSEwN3KnOPwCIVNHQhI94uBLBcL4Qd0M9w_J-mR_qBPzqfq2cTtnNZMIlL4TPg7tqQuwqnWDBR9IcqHZ_85i9NnnqAs_RDrQxs__3NwcLVE7ZVI44NkreEAqpJ4HPX-WgDsIFwPdYFe1I"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 50%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="chic minimalist nail studio logo in pastel tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwoMGJ8NEwyw6Pffjolz9yF2S9KG5LPZEnQIVKgXJcDjwFKBpt-KTHOSiGhPPGGSCNwQeUEDY-BBlgrsqBXHyv6Mw5rrN__TaOO_imXoaGf8kuTl3ktgB2yalViO8hADgjUFiq3blg5DoPgQTTSKZxL9QLgx7RAQeEzMteQhh5v1siOsqd8QjGw1tVCxgr5V2-6yQK5cVfQ5a7H5sZJh85KNUFUj9h0qe6sSaLQTpNvbNcGqiyV4DrAGKKfEwOV985xplCHPm5aE"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Combo Cắt Da + Sơn Gel + Chà Gót Chân Chuyên Sâu</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">Nail Bar - Crescent Mall</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">150.000đ</span>
+<span class="text-gray-400 line-through text-xs">300.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5 (Repeated Style for Grid filling) -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="facial treatment close up with refreshing cucumber and cooling therapy mask in luxury clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1BAYO8ngHX6dGk7NbZxVmDxDn91fT-PRhA3HobAVCwbvpj4WNCYqgz-RrTkxiS3PAuy1hlokzjE-x8GOf1hu4MlTNohtSZT-iuY5cYeyr8GQWlwgzZB3sMg8VhyjM8Hw9daJ5joRvMZtoCaQa0n2uoILoEIZiokNEa7AJmbRhTmibnG2QG5VrZh-wzlEqjJk4c2SSCcqigsNJo4jnCgU3M8tAklin-XV2Uk8HApoc85yt1vnwckqQeejrWsovWkfFDz607aIiVTs"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 40%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="organic skincare brand emblem with botanical illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNzQpCtneZ4dWGODClbvdFFTfsU7vp9u9JgitRaQA6fvKtReqz6uf2aOZDd1wqNvFa8dfmLiykb0PCnCWh-47qBN-IIuncSz7VzH_oaWw4iEk91k1kU4gsX1Z0koq650N6dWheSstZ6avmC6fyFf7YdFSWjJ6HrYeswhQw1hTAjWu9M2hPci4pNds1ZhLrll3TgnxWBnrS7K-KdtKzYm8awn4JNEzP3bR4pQIJwl-TifXUgXMtdqi2Pf-O_wHKdQbJ_H73b6bfSTA"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Chăm Sóc Da Mặt Cơ Bản Bằng Thảo Dược Tự Nhiên</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">Mộc Spa - Đống Đa</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">250.000đ</span>
+<span class="text-gray-400 line-through text-xs">420.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="premium fitness gym with high end weight machines and modern interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClo3DJFXkXNXvz27jBpBIHRAHoJw4AvVuaYVhzF9WhyMu_D6zhDdLfr43yI_jU773D7RALSJtJ4mdhIhvfdQuUZLy5sEnlZfhQWqdtVv8BJEEvEzDjZ8l9OzzJIhHD2KecAVU2dqAm7wiio8DlWKDgodyF2LtjApt_2r0BC3EjNqBlFXX2k8oqV1-6iKRAh73w924WAr_F6MDpAyPgMb0HwJUdoDR46O4EIjMkqDnZ9IC1GxFJbLCTwzz1R5kMXtl4XQ_PNOnEXCs"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 20%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="bold fitness club logo with sleek minimalist typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLeK0L98K2n_hp6vSgfMxURPwzkoKQOSCmBgVmNwV72hsD63bQWC9o8piwUx5tK0qktZhDXNvdFSwb1YAuWPXGX7Z64WYDmiTaGBaE9SvcTmz8MW_Bg2XAMFHZB_FWJdJrq2OSm2-5YYr5njeVqkcG0jGJKZeteq1e9Cy03wGv0F7IVlh_3pIyMLQ0ntEQ9Zm8FzISXjT9sFFx-wFP-Ao_oryDPhOJ_s4U6MwrVFz9Mn1mpEXm2QZZlupq4zLJjroIQ1b0ATLvFgI"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Thẻ Tập Gym &amp; Yoga 1 Tháng Không Giới Hạn</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">California Fitness &amp; Yoga</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">600.000đ</span>
+<span class="text-gray-400 line-through text-xs">750.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of hot stone massage therapy on back with zen balanced stones and aromatic oils" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBImQfB8lzzjHT_W4vNn3eCCnQqoK35u59xvOAWBVFRI-Tf_T5Kr7SXDGp30tPcVfN3jQ4R5lRahwxN-OLruqjYAaF7AwA6OXX6JKks0gZaS_JwUNSEysTqYA_4papaGq9cNVcpO2f1NWCEa5zvtDvziY5N-FbIIFCH103eUT_l8AyRYKTmLHPxhJdlvoyoBl3g9QQf5OxeE7Cr_ylNzVosMh1YY0_DNqUPyg-bRNq5pH_wzO0Q1Q4pScpqCVvsWyV6j5BLXH77NSA"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 35%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="traditional spa brand logo with lotus icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALq1fITRLQXKIOMtltFeWTxs5l7OSbVKdhbA89EdtilqdzePavj3bpreOpmBeYWIhFIHL23-2zyPRRscOA4wZDGcUf0znYHdC3MQiRoOeMl8KIdq0a8Olut0EaPCgZoAeN-ys1dV940VtcK1M7anG46sOg-s8-dfO70F8ix7FGRsz3YoPSIsw39cVIlGORakmlxNNUyrSaaB2mF4duWY71Fyu1OQUK36HhO0tlYahVU2du_Ehy2v4aZkw26EBUESqBbJdNTz7nDFQ"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Xông Hơi Đá Muối + Massage Body Tinh Dầu Tràm</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">An Nhiên Spa - Cầu Giấy</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">350.000đ</span>
+<span class="text-gray-400 line-through text-xs">540.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional hair salon with stylist station mirror and sleek black furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4m0DsQn0lc-Sr_2mjyaaYUtOgmzVZqhT4XNiM5ZCzlkEvwd27VousmPrpHH_d8q9lo1P_QRxwt4s9jloDaplLlml3OT5DEWBqb_Sfk2smKyWz61fTljbD3s-Dhd-G-OHF-r7FOd1I17a8Gt8QREnjTbpJXOElf-3gS9cLlPGhAOUXXctj7ZQVpvh1y-EjrdoYKVVuFezAx-bWgqNYfJc59_7yEoWXfDpFbb5hz7bfYnLB8u_Qb-EwBVK813XsrqtemsDfr2OaWdU"/>
+<div class="absolute top-2 right-2 bg-[#EE4D2D] text-white text-[10px] font-bold px-2 py-1 rounded">Giảm 42%</div>
+<div class="absolute bottom-2 left-2 w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg bg-white">
+<img class="w-full h-full object-cover" data-alt="modern hair studio logo with scissors icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdjQB4phz7r_SOdsYSVUE8E8AwDqPUKbyG4FzvEWQvBmY5CTMjXtgiKJ0pDGC0gZpseeFFKBxcQMm8cGrWhJOBgFJoKWsPlL1VC8imUD_evta0D6g3RHBtpt-YWrQFz-82gjHY8jPaMVTsSJz0IF3E9BUckjQPszFjkmWyeZtmT7qKx6tWH7bs8GiS_-WyobNEeMRin2V_ry4Xz4Zk1CKDwb4VVYE1dh7rhtiAYHV8Hhkbt1QqlQcFvcR0jHN1zw7GOvSb3w7tjXM"/>
+</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-sm leading-tight line-clamp-2 mb-2 group-hover:text-[#FF5B00] transition-colors">Combo Cắt + Gội + Uốn/Nhuộm Tại Salon Cao Cấp</h3>
+<div class="flex items-center gap-1 text-[11px] text-gray-500 mb-3">
+<span class="material-symbols-outlined text-xs">store</span>
+<span class="truncate">Vidal Sassoon Partner</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-[#EE4D2D] font-bold text-lg">450.000đ</span>
+<span class="text-gray-400 line-through text-xs">780.000đ</span>
+</div>
+<div class="flex items-center gap-0.5 text-xs font-bold text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Placeholder -->
+<div class="flex justify-center mt-12 gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:border-[#FF5B00] hover:text-[#FF5B00]">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#FF5B00] text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-[#FF5B00] hover:text-[#FF5B00]">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:border-[#FF5B00] hover:text-[#FF5B00]">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:border-[#FF5B00] hover:text-[#FF5B00]">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 mt-20">
+<div class="py-12 px-8 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<span class="text-lg font-bold text-gray-900 dark:text-white block mb-4">Dealtoday</span>
+<p class="text-xs text-gray-500 leading-relaxed">Dealtoday là nền tảng thương mại điện tử chuyên cung cấp các giải pháp khuyến mại toàn diện, mang đến cho khách hàng những trải nghiệm dịch vụ chất lượng với mức giá ưu đãi nhất.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold text-gray-900 uppercase">Khám phá</h4>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Về chúng tôi</a>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Tin tức</a>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Hợp tác kinh doanh</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold text-gray-900 uppercase">Hỗ trợ</h4>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Điều khoản sử dụng</a>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Chính sách bảo mật</a>
+<a class="text-xs text-gray-500 hover:text-[#FF5B00] underline-offset-4 hover:underline" href="#">Liên hệ</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold text-gray-900 uppercase">Theo dõi</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer">public</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer">mail</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-[#FF5B00] cursor-pointer">call</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-900 py-6 px-8 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Plus_Jakarta_Sans'] text-xs text-gray-500">© 2024 Dealtoday. All rights reserved.</span>
+<div class="flex gap-4 items-center">
+<span class="text-xs text-gray-400">Payment methods:</span>
+<div class="flex gap-2">
+<div class="w-8 h-5 bg-gray-200 rounded"></div>
+<div class="w-8 h-5 bg-gray-200 rounded"></div>
+<div class="w-8 h-5 bg-gray-200 rounded"></div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

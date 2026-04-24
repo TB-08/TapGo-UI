@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#00497e",
+                    "on-surface": "#271812",
+                    "on-primary": "#ffffff",
+                    "text-secondary": "#757575",
+                    "secondary-container": "#fd5837",
+                    "primary-container": "#ff5b00",
+                    "surface-variant": "#fadcd2",
+                    "surface-container-low": "#fff1ec",
+                    "text-primary": "#333333",
+                    "primary-fixed": "#ffdbce",
+                    "on-tertiary-container": "#002d51",
+                    "secondary": "#b62506",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e4beb1",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "inverse-surface": "#3e2c26",
+                    "surface-container": "#ffe9e2",
+                    "on-primary-container": "#521800",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#ffede7",
+                    "surface": "#fff8f6",
+                    "inverse-primary": "#ffb59a",
+                    "surface-bright": "#fff8f6",
+                    "secondary-fixed": "#ffdad3",
+                    "primary": "#a83900",
+                    "surface-tint": "#a83900",
+                    "surface-muted": "#F5F5F5",
+                    "status-sale": "#EE4D2D",
+                    "surface-container-high": "#ffe2d9",
+                    "on-primary-fixed-variant": "#802a00",
+                    "surface-container-highest": "#fadcd2",
+                    "border-subtle": "#E0E0E0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#8d1600",
+                    "on-surface-variant": "#5b4137",
+                    "on-tertiary-fixed": "#001c37",
+                    "on-secondary-container": "#580a00",
+                    "surface-dim": "#f1d4ca",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb59a",
+                    "tertiary": "#0061a6",
+                    "background": "#fff8f6",
+                    "tertiary-container": "#0096fc",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#d2e4ff",
+                    "outline": "#907065",
+                    "on-secondary-fixed": "#3e0500",
+                    "on-background": "#271812",
+                    "tertiary-fixed-dim": "#a0caff",
+                    "on-primary-fixed": "#380d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-x": "2rem",
+                    "gutter": "1rem",
+                    "topbar-height": "40px",
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1rem",
+                    "container-max": "1200px",
+                    "header-height": "72px"
+            },
+            "fontFamily": {
+                    "mega-menu-title": ["Plus Jakarta Sans"],
+                    "top-bar": ["Plus Jakarta Sans"],
+                    "mega-menu-item": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"],
+                    "price-large": ["Plus Jakarta Sans"],
+                    "nav-primary": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "mega-menu-title": ["14px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "top-bar": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "mega-menu-item": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fff8f6;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar Shell -->
+<header class="sticky top-0 w-full z-50 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm antialiased">
+<div class="flex flex-col w-full max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex items-center justify-between h-[72px] gap-8">
+<!-- Brand Identity -->
+<div class="flex-shrink-0">
+<span class="text-2xl font-black text-orange-600 dark:text-orange-500 tracking-tighter">Dealtoday</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1 font-bold transition-all duration-200" href="#">Hot Deals</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="#">Du lịch</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="#">Ẩm thực</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="#">Giải trí</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="#">Sức khỏe</a>
+<a class="text-gray-700 dark:text-gray-300 font-medium hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200" href="#">Voucher</a>
+</nav>
+<!-- Search Bar -->
+<div class="flex-grow max-w-md relative">
+<div class="flex items-center bg-gray-50 border border-orange-600 rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-orange-600">
+<input class="w-full bg-transparent border-none focus:ring-0 px-4 py-2 text-sm" placeholder="Tìm kiếm deal hot..." type="text"/>
+<button class="bg-orange-600 text-white px-4 py-2 flex items-center justify-center scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="text-gray-700 dark:text-gray-300 scale-95 active:scale-90 transition-transform flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-gray-700 dark:text-gray-300 scale-95 active:scale-90 transition-transform flex items-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section: Banner Slider -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-8">
+<div class="relative w-full aspect-[21/9] rounded-xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="vibrant outdoor summer music festival at sunset with stage lights and a large crowd cheering in silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATwXSdvOkDNC1aBKWnpqGX5H2WBatbB_gX69V0ppvt6VRDvQ3xtEWH-Ah_we1VqyGPsRjJ5kvYkJcooWgiSfa43kLSIrMhuVgwusWOWbra6iy2WqMFjinKFIpZIoDB3mnMJo15JwbGM8RVUda56gsws2_vMkHqODqs7xlsfwl5qrbjmzlwRL_oy9mNnBMfrGQkoyE0xu9s8ljpxX8IEOEowigsn12aXxj6xRZaPT6QkXa45et2tufotQWavb_m12tJYid4SvyBeKg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent flex items-center">
+<div class="px-12 max-w-2xl">
+<span class="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Sự kiện nổi bật</span>
+<h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">Summer Music Festival 2024</h1>
+<p class="text-white/90 text-lg mb-8 font-medium">Trải nghiệm không gian âm nhạc đỉnh cao cùng hàng loạt ưu đãi vé VIP chỉ có tại Dealtoday.</p>
+<button class="bg-white text-orange-600 px-8 py-4 rounded-lg font-extrabold text-lg shadow-lg hover:bg-orange-50 transition-colors scale-95 active:scale-90">
+                            Khám Phá Ngay
+                        </button>
+</div>
+</div>
+<!-- Slider Pagination Indicators -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-8 h-1.5 bg-white rounded-full"></div>
+<div class="w-2 h-1.5 bg-white/40 rounded-full"></div>
+<div class="w-2 h-1.5 bg-white/40 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Flash Sale Section -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 mb-12">
+<div class="bg-gradient-to-r from-orange-600 to-secondary-container rounded-2xl p-6 md:p-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="text-2xl md:text-3xl font-black text-white italic tracking-tight">FLASH SALE</h2>
+<div class="flex items-center gap-2 text-white">
+<span class="text-sm font-medium ml-4">Kết thúc sau:</span>
+<div class="bg-black/20 px-2 py-1 rounded font-bold">02</div>
+<span>:</span>
+<div class="bg-black/20 px-2 py-1 rounded font-bold">45</div>
+<span>:</span>
+<div class="bg-black/20 px-2 py-1 rounded font-bold">12</div>
+</div>
+</div>
+<a class="text-white font-bold flex items-center gap-1 hover:underline" href="#">
+                        Xem tất cả <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Product Carousel (Simulated Grid) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Flash Sale Item 1 -->
+<div class="bg-white rounded-xl p-3 shadow-md group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury hotel buffet spread with fresh seafood and gourmet appetizers in an elegant dining setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6UVU8J4zqAz_ZC6Mld6uKzGfOhAVnN_SfjT6bt6uFYkmXn4hi65BoVNMEzqxkQX5KXKHJYFOloXX62Ql8d5_yRjFqK_HE4sINhl2e9xTeSCKHHpQ0UohC0xOvXukXRErB6k5_xIS2dmLRlu0_o4jKeuzaNdD3AU-PnA-WEhAc0lGqYvAV7s2HJ5osdQ5c7EAqUXCZOgtkcp9demFCtXfnL33Ha3EW36vS2hwaNmdnGZMmbBmK8Z6yi_4Z4XjW8FmjmTBRt7n-CsQ"/>
+<div class="absolute top-2 left-2 bg-status-sale text-white text-[10px] font-black px-2 py-1 rounded">GIẢM 50%</div>
+</div>
+<h3 class="font-bold text-sm text-on-surface line-clamp-2 mb-2">Buffet Trưa Hải Sản Cao Cấp - Hotel Sheraton</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-status-sale font-extrabold text-lg">450.000đ</span>
+<span class="text-text-secondary line-through text-xs italic">900.000đ</span>
+</div>
+<div class="relative w-full h-4 bg-orange-100 rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-status-sale w-[75%] rounded-full"></div>
+<span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-white uppercase">Đã bán 75</span>
+</div>
+</div>
+<!-- Flash Sale Item 2 -->
+<div class="bg-white rounded-xl p-3 shadow-md group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="athletic person lifting weights in a modern high-end gym with professional equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFGN_WK-0wZ_USqZT-AIsHHWwP5xieJOWz4IOYSbcnyk6kR7RpfgC1_kL3c3ZWXT5LDGJHoMMin1PA8r3nWwlCu9nSg6rg6v2JLkG6Iyx4QIMiu99MxFU1Qs84pwg1Cwqyhj2hHLQnkXRGvEoZWPhJ5QQqEkVjuu2ovRfGByzIyYivSqC4VjNm037mqoSUWCPsOyBchzSBeXGRUugBmEm-7b0_cjtZKCE9jo52_ZrmpOVJwtlQPvrZhnVxSANSwyOBtIDREbWwEJk"/>
+<div class="absolute top-2 left-2 bg-status-sale text-white text-[10px] font-black px-2 py-1 rounded">GIẢM 35%</div>
+</div>
+<h3 class="font-bold text-sm text-on-surface line-clamp-2 mb-2">Gói Tập Gym 1 Tháng - California Fitness &amp; Yoga</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-status-sale font-extrabold text-lg">650.000đ</span>
+<span class="text-text-secondary line-through text-xs italic">1.000.000đ</span>
+</div>
+<div class="relative w-full h-4 bg-orange-100 rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-status-sale w-[40%] rounded-full"></div>
+<span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-white uppercase">Đã bán 40</span>
+</div>
+</div>
+<!-- Flash Sale Item 3 -->
+<div class="bg-white rounded-xl p-3 shadow-md group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="modern cinema theater with comfortable red seats and a large blank screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGiICzD97Qh_R5YWlDihL0UtwpsE9P4FW7U2qmuBfHjUHkMhv6hscF66M21yDpY8IeqoIXTTZAbyz_cU1M_vUqjTY628PXm50CAMs5kVDCGtwcOSfcqc6aLY78l0zIr7zJQecGjYFonx75-cKFdZ4YMA8dAwvTHhgNm4msmGaKwxrjgYOSbSIYEp14O7O2ewE0x9LGQrVFt9TJhphIuT2pIr_OHtKaKHwbmNkI4FIr5jScAHC4mgq0XroXY5fJ8mdEABGApzWuHmc"/>
+<div class="absolute top-2 left-2 bg-status-sale text-white text-[10px] font-black px-2 py-1 rounded">GIẢM 20%</div>
+</div>
+<h3 class="font-bold text-sm text-on-surface line-clamp-2 mb-2">Vé Xem Phim 2D Mọi Khung Giờ - Hệ Thống CGV Toàn Quốc</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-status-sale font-extrabold text-lg">88.000đ</span>
+<span class="text-text-secondary line-through text-xs italic">110.000đ</span>
+</div>
+<div class="relative w-full h-4 bg-orange-100 rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-status-sale w-[90%] rounded-full"></div>
+<span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-white uppercase">Sắp cháy hàng</span>
+</div>
+</div>
+<!-- Flash Sale Item 4 -->
+<div class="bg-white rounded-xl p-3 shadow-md group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="relaxing spa room with massage table, candles, and stacked towels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgy6GJSnbn_bZ8CpO5g-UmM99JGHyhVlctP2pQrlUjPwZaY2ttCbDz2mlrZomHiBHB3ymK6YDxU4RA_-GpvDwsH8gHDQir2QITMgrex1emj2yZLcKiF66JMuHZtritVfZFAWWg9F-gNWHRShyzlIzWg5NigDeISJ9vd2Gk14WkpPAZ23_z7kxxe2IraHyORRd4fanEj8GrAVD8JGghlL-LU4Y5K33JNL6pdJ27rYCDBDGPQygCi8ADszajHEHvzm8PEnmXHGhS7yM"/>
+<div class="absolute top-2 left-2 bg-status-sale text-white text-[10px] font-black px-2 py-1 rounded">GIẢM 60%</div>
+</div>
+<h3 class="font-bold text-sm text-on-surface line-clamp-2 mb-2">Trọn Gói Massage Body &amp; Foot - Sen Spa Hà Nội</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-status-sale font-extrabold text-lg">199.000đ</span>
+<span class="text-text-secondary line-through text-xs italic">500.000đ</span>
+</div>
+<div class="relative w-full h-4 bg-orange-100 rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-status-sale w-[60%] rounded-full"></div>
+<span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-white uppercase">Đã bán 60</span>
+</div>
+</div>
+<!-- Flash Sale Item 5 -->
+<div class="bg-white rounded-xl p-3 shadow-md group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury resort infinity pool overlooking the ocean at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2_gWH2ieCOqZejFG32WE458IuXl-_95q5Fqs8zKcSxnERdAlwoJwK69nmxlurdTUwCZsB2XLnL5_ty5XKHulYyHZ3IdbsOWztgpy-gxXKPtPkFRulCXF84Z7acCAakt8rToSo4VqsgR9utTED-lkSo1U-8I9eNcZCheJW4U0as-XQomOnTUjSVjfP7ePyvkfKCRTDK_VvCnwCVYhS6r-vIXnLalk2svGZyQWwe5Ssxkfo2L4TAIuWSiF8qNO-PqDQeMqT20YY69Q"/>
+<div class="absolute top-2 left-2 bg-status-sale text-white text-[10px] font-black px-2 py-1 rounded">GIẢM 45%</div>
+</div>
+<h3 class="font-bold text-sm text-on-surface line-clamp-2 mb-2">Nghỉ Dưỡng 2N1Đ Tại Vinpearl Resort &amp; Spa Phú Quốc</h3>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-status-sale font-extrabold text-lg">2.450.000đ</span>
+<span class="text-text-secondary line-through text-xs italic">4.500.000đ</span>
+</div>
+<div class="relative w-full h-4 bg-orange-100 rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-status-sale w-[30%] rounded-full"></div>
+<span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-white uppercase">Đã bán 30</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Brands Section -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-black text-on-surface tracking-tight uppercase">Thương hiệu uy tín</h2>
+<div class="h-px bg-gray-200 flex-grow mx-8"></div>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+<!-- Brand Logo Placeholder -->
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">VINPEARL</span>
+</div>
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">SHERATON</span>
+</div>
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">CGV</span>
+</div>
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">VƯỜN VUA</span>
+</div>
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">FLC HOTEL</span>
+</div>
+<div class="aspect-[3/2] bg-white border border-gray-100 rounded-xl flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<span class="text-gray-400 font-black text-xl italic tracking-tighter">ALMA RESORT</span>
+</div>
+</div>
+</section>
+<!-- Dành cho bạn: Product Grid -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 mb-16">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-orange-600" style="font-variation-settings: 'FILL' 1;">recommend</span>
+<h2 class="text-2xl font-black text-on-surface tracking-tight uppercase">Dành riêng cho bạn</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="healthy bowl of salad with fresh vegetables and grains on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU32V93zkQlSlQOBoqHbNtYVAMKtnqRLHg7zXdAJLaxBy9LEV38AXHW_UtonNILaBlYvhQ_IBV2uJpYpeRKsvL4FfJmg2X215DG6j_XdYdxV_Csk7-mu96hefx7-OyhjVg4UxyKr84kuZkCJ_pBmuFtSBwAwOKirz2353x4WUR20IpZVVZkNTIAigewV3qLq-GD9tgUP3-ebTMI2Nc2L5DoFDeImae7gg0I3UHiGy0sHPPViIS1Nywb7j0r5OyXp9CN0KJgpI9JWs"/>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-orange-600">ẨM THỰC</div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-2 line-clamp-2 hover:text-orange-600 cursor-pointer">Combo Healthy Meal Dành Cho 2 Người - Delish Garden</h3>
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-text-secondary text-xs">(128 đánh giá)</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<div class="text-text-secondary text-xs line-through italic">450.000đ</div>
+<div class="text-status-sale font-black text-xl">285.000đ</div>
+</div>
+<button class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="stylish modern hair salon interior with professional equipment and comfortable chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlKYdtSldXcthaVk2WRuFRSB1l7qDxRetv6eHBMXiISYqv2Fs32qcqjmQyO02N_1i7lPUiY7P-vufdepTkjrYwY1_q81g4EQuDtFqDufZ-AAjwexvymuRjap4cob6rnoemsBsYg-bKs5tMd0pIjCW96FFRy3R7OSDo-NtcDXyV9aviWT0d63cCRH3jrkoHU-P-PdmC_Pd5FgAcCBwwMDGaKA4LIhSd8lRr5xVVgcmPrxmd-Ic7wc7ukm_8NqTZorRYuzmI0gZPKc"/>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-orange-600">SỨC KHỎE</div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-2 line-clamp-2 hover:text-orange-600 cursor-pointer">Combo Cắt &amp; Uốn/Nhuộm Hàn Quốc Cao Cấp - Hair Salon 30Shine</h3>
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-text-secondary text-xs">(452 đánh giá)</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<div class="text-text-secondary text-xs line-through italic">1.200.000đ</div>
+<div class="text-status-sale font-black text-xl">599.000đ</div>
+</div>
+<button class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="woman practicing yoga in a serene sunlit studio with minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiUlqyXfIj19i5X1WOfsVnMn4WhJR5fpZHzEiG4anxYFrR5GllyEpCygVrOAT4DHTYUZE7GyM2eJ1t4QoANFLe8BZHCeIBjqceKkBIS09gCBBqWE4z9el73NZM7pb2nQHzAv54Mh_sgx7KF3g7tIEjKMswXNu-Mf68jr7wbVJ8PumcYr2B7XsAgfLkb9MaDO22zc2Zl3zGbaDQxC4f2NU9nR6dUT1_0IIl8453OKxTEUBOlnhnMFGMtBrypzv1LynjFD5vfWzFICQ"/>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-orange-600">GIẢI TRÍ</div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-2 line-clamp-2 hover:text-orange-600 cursor-pointer">Vé Tham Gia Workshop Yoga &amp; Thiền Định 1 Buổi - Omi Studio</h3>
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.7</span>
+<span class="text-text-secondary text-xs">(86 đánh giá)</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<div class="text-text-secondary text-xs line-through italic">350.000đ</div>
+<div class="text-status-sale font-black text-xl">150.000đ</div>
+</div>
+<button class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="glass of white wine with cheese and grapes on a table at a vineyard during sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7XnJ_0LecLs7hqZsK9dEt3p_vTPXMWmntVizh6u6uN8Of0YXl1zJidqjJdhE9KCE7uwMvAtv_pRg1irYs_mJhL2lkLYZhvl5hjOHUpfwS1ZU4jI5r6svrfIHWAbgV8fBSg-5cx0p-Re03IPVNn8yaIlR16DvPNUnJkKLzGX6PDCgj6ZRV9AxbCPVULvcy_z2Cbh3iQs5U89sdqEZF5KrXWnf0NDatIig8yKatRxoyuEykReXhfk7m6KoezhIgDf2Y1aGccpO4pqs"/>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-orange-600">DU LỊCH</div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-2 line-clamp-2 hover:text-orange-600 cursor-pointer">Tour Tham Quan Hầm Rượu Vang &amp; Thưởng Thức Cuisine - Dalat Hills</h3>
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-text-secondary text-xs">(215 đánh giá)</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<div class="text-text-secondary text-xs line-through italic">800.000đ</div>
+<div class="text-status-sale font-black text-xl">490.000đ</div>
+</div>
+<button class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<button class="border-2 border-orange-600 text-orange-600 font-bold px-12 py-3 rounded-xl hover:bg-orange-600 hover:text-white transition-all scale-95 active:scale-90">
+                    Xem Thêm Deal Mới
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 py-16 max-w-7xl mx-auto px-6">
+<div class="space-y-6">
+<span class="text-lg font-bold text-gray-900 dark:text-white block">Dealtoday</span>
+<p class="text-gray-500 dark:text-gray-400 leading-relaxed">Sàn thương mại điện tử chuyên biệt về voucher, deal khuyến mãi các lĩnh vực Ẩm thực, Du lịch, Giải trí và Sức khỏe.</p>
+<div class="flex items-center gap-4">
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Về Dealtoday</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Giới thiệu</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Tuyển dụng</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Điều khoản sử dụng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Trung tâm hỗ trợ</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Góp ý, khiếu nại</a></li>
+<li><a class="text-gray-500 dark:text-gray-400 hover:underline hover:text-orange-600 dark:hover:text-orange-400 transition-opacity opacity-80 hover:opacity-100" href="#">Liên hệ đối tác</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Tải ứng dụng</h4>
+<p class="text-gray-500 dark:text-gray-400 mb-6">Trải nghiệm mua sắm tốt nhất trên app mobile.</p>
+<div class="flex flex-col gap-3">
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">shop</span>
+<div class="flex flex-col">
+<span class="text-[8px] opacity-70">Get it on</span>
+<span class="text-sm font-bold leading-none">Google Play</span>
+</div>
+</div>
+<div class="bg-black text-white px-4 py-2 rounded flex items-center gap-3 cursor-pointer hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">ios</span>
+<div class="flex flex-col">
+<span class="text-[8px] opacity-70">Download on the</span>
+<span class="text-sm font-bold leading-none">App Store</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 py-8">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 dark:text-gray-400">© 2024 Dealtoday Clone. Một sản phẩm thương mại điện tử chuyên biệt.</p>
+<div class="flex gap-8">
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Facebook</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Instagram</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-orange-600" href="#">Youtube</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

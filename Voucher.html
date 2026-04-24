@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dealtoday - E-Voucher &amp; Gift Card Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAFAFA; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .ticket-cutout { position: relative; }
+        .ticket-cutout::before, .ticket-cutout::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #FAFAFA;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .ticket-cutout::before { left: -8px; }
+        .ticket-cutout::after { right: -8px; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-container": "#fd5837",
+                "secondary-fixed": "#ffdad3",
+                "on-secondary-fixed-variant": "#8d1600",
+                "text-primary": "#333333",
+                "surface-dim": "#f1d4ca",
+                "secondary": "#b62506",
+                "on-error-container": "#93000a",
+                "on-background": "#271812",
+                "inverse-primary": "#ffb59a",
+                "primary-container": "#ff5b00",
+                "surface-muted": "#F5F5F5",
+                "text-secondary": "#757575",
+                "on-tertiary-fixed-variant": "#00497e",
+                "on-primary-fixed-variant": "#802a00",
+                "surface-variant": "#fadcd2",
+                "inverse-surface": "#3e2c26",
+                "outline-variant": "#e4beb1",
+                "on-error": "#ffffff",
+                "primary-fixed": "#ffdbce",
+                "on-tertiary-container": "#002d51",
+                "on-primary-fixed": "#380d00",
+                "surface-container": "#ffe9e2",
+                "surface-container-low": "#fff1ec",
+                "on-surface-variant": "#5b4137",
+                "on-secondary-fixed": "#3e0500",
+                "primary-fixed-dim": "#ffb59a",
+                "outline": "#907065",
+                "surface-container-lowest": "#ffffff",
+                "surface-tint": "#a83900",
+                "on-secondary": "#ffffff",
+                "on-surface": "#271812",
+                "on-primary-container": "#521800",
+                "on-tertiary-fixed": "#001c37",
+                "tertiary": "#0061a6",
+                "secondary-fixed-dim": "#ffb4a4",
+                "tertiary-fixed": "#d2e4ff",
+                "surface-container-high": "#ffe2d9",
+                "tertiary-container": "#0096fc",
+                "surface-container-highest": "#fadcd2",
+                "border-subtle": "#E0E0E0",
+                "surface-bright": "#fff8f6",
+                "on-secondary-container": "#580a00",
+                "background": "#fff8f6",
+                "primary": "#a83900",
+                "error": "#ba1a1a",
+                "surface": "#fff8f6",
+                "error-container": "#ffdad6",
+                "on-primary": "#ffffff",
+                "status-sale": "#EE4D2D",
+                "inverse-on-surface": "#ffede7",
+                "tertiary-fixed-dim": "#a0caff",
+                "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "nav-primary": ["Plus Jakarta Sans"],
+                "body-main": ["Plus Jakarta Sans"],
+                "price-large": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "nav-primary": ["15px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                "body-main": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "price-large": ["18px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-[#FAFAFA] text-text-primary">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-[0_1px_4px_rgba(0,0,0,0.05)] docked full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto flex flex-col w-full px-4 lg:px-8">
+<div class="flex items-center justify-between h-[72px] gap-8">
+<!-- Brand -->
+<div class="flex-shrink-0">
+<span class="text-2xl font-black text-[#FF5B00] tracking-tighter">Dealtoday</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Hot Deals</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Du lịch</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Ẩm thực</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Giải trí</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#FF5B00] transition-colors" href="#">Sức khỏe</a>
+<a class="text-[#FF5B00] font-bold border-b-2 border-[#FF5B00] pb-1" href="#">Voucher</a>
+</nav>
+<!-- Search Bar -->
+<div class="flex-grow max-w-md hidden lg:flex">
+<div class="relative w-full flex">
+<input class="w-full border-2 border-[#FF5B00] rounded-l-xl px-4 py-2 focus:outline-none text-body-main font-body-main" placeholder="Tìm kiếm voucher, thương hiệu..." type="text"/>
+<button class="bg-[#FF5B00] text-white px-6 rounded-r-xl active:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+</button>
+<div class="relative">
+<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
+<span class="material-symbols-outlined text-gray-600">shopping_cart</span>
+</button>
+<span class="absolute top-0 right-0 bg-[#FF5B00] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white">3</span>
+</div>
+<button class="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 rounded-full">
+<span class="material-symbols-outlined text-gray-600">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 lg:px-8 py-6">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-text-secondary text-sm mb-8">
+<a class="hover:text-primary transition-colors" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-text-primary font-medium">Voucher &amp; Gift Card</span>
+</nav>
+<!-- Top Section: Category Cards -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface uppercase">SIÊU HỘI E-VOUCHER</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Category Card 1 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of delicious gourmet burger and fries with warm lighting and rustic wood background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt-q9MmqVSlMySX7LvRhdrPPPFxpx9u7HF-yW3CYH73y0IZBJ9Ht8R-atomXqhkSNvGReTuNlLSCKNl2715TekCM71LCZk2k3IZ81cRNEoLiFJ90a1odtvS_w7kRr6LIWY82jdmFH7I6bZEBt0G_3AtNRyDasGJikmgZs-9VYVBP6uZbkpGA8tKmqpx3Wf3nF8alM05aEstpju85zaPL_JLVRckdZI5EYKt6KxADiQFduPei8txkw3fzQE2cVjzOPRJn4Zvp7UQTI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Voucher Ăn Uống</p>
+<p class="text-xs opacity-80 mt-1">250+ thương hiệu</p>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="interior of a modern cinema theater with glowing screen and comfortable red seats in soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArG2l1i4KpiJaiHpa8aaX6vj0xPuE6gyjHLs5-XmJaLZ9m9GJBkg0FiJ3Rw4BzEZOsgSUvfB_zJuCW-2O0o_ngsMk9OeYTJC7-aydOELLxhIpKr7HM_MJvOe_xMU35VVV9hyPpgQuecLDWduSCzkiQIJK-O2ves-4jin3xwj3U2UeVppk_qGUkhaSGwPnysJpNFWOA7NYTjkxsiatpAq2t_eTRsI-W26PHADpVgwZa8baHdbD5Qbj4oMaF7-4cq4pzwAWJTgxfHss"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Voucher Giải Trí</p>
+<p class="text-xs opacity-80 mt-1">Săn deal xem phim</p>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="calm spa treatment room with burning candles, smooth massage stones and soft white towels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTUbSdUuEs1LnVhUrhoX49cDXXqM70JRBF9a1opf6HIgvHAa4uUJzY9-uS3dxHaa8BkBthwAu-k7W6TGerltm9JQ3x2jVkwGJyeKPSNZTdKIiy4RmR15JPya5iMb8mjK5xCEXQo86UXGgEkUuhqoYL6xOWLyY09btHuzXxezEf8zD3eN5MPFBT4GAh1qMhpyiVLHj212zGlhDYS1VHAOioPjYbMJNaWEQj-y6vIswZTzw0J816yScvhXxZkQVTh85FKCr4nNG84aQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Spa &amp; Làm Đẹp</p>
+<p class="text-xs opacity-80 mt-1">Ưu đãi đến 70%</p>
+</div>
+</div>
+<!-- Category Card 4 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="abstract shopping bags and festive boxes on vibrant background with dynamic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIm6MjIL9jIgPv-WE4Ko2E7mv1RG3Dqk2cUiJPQM1RZz794eecX-IO-0wohhPwy55hlBYNoCBU8frBhSR2bAieGfZcRCOyi5u602VHc8DRDW4KXMpUgYDghbu5AakvuZSoT2e3YkagWs_W7zQZDBrcuuxbyR6YV7EEISSs-n0tZtaU29rCcAUCZwZC9JAuFWj_gKNgrSMeQKbc3jsinH5hJBX7QtPIjoJFcCBSRNKQbasLK186nLyaxazhoRMhynuanfRTxbYmJOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Deal 1K</p>
+<p class="text-xs opacity-80 mt-1">Số lượng có hạn</p>
+</div>
+</div>
+<!-- Category Card 5 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="fast delivery motor scooter moving through city street with motion blur effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADlhukzhnxGTS1wpFHHXhA0JPC1XZ29rLXQZnT06wh_WbAgZ-Jmnbx-s-v1mHPnjXa2kiXPuIqy8thEWS-2UQM5j_5ymWp2tOaA4G_IyEr6SlvvIpEiTNJSgn8m8oG0HpVb3wSPyG_V0ylAjzLy_4_0ljMbwL07Frlmvwh-WcvFCd6ltobUuV1nR8MnUZlq5ikHS7Cqa4iLUDd3M6tvvgDdbiBc4y9s3jakWLN15OISGJdLH374Kgpmnuwi3trbRJZDiUqk05T7JE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Freeship</p>
+<p class="text-xs opacity-80 mt-1">Toàn quốc</p>
+</div>
+</div>
+<!-- Category Card 6 -->
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="premium luxury gift box tied with elegant ribbon on marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0GVs3ggYzmooN4p8YSmnFa9JFN7mzTlZ7jA_z55Lnkwo8kwU5BDrOgW2Quelttd-EpbpJH9ZBKgMKWC-F5Sx0IKsYjhR636kfttV72A04QoKlXcLMMhC_mpV-D-qbsSQzJAxI6FFKzQqDhv0S5YL9HyQpV2EWjeh2wVhoXbJ7FVir4QNtRQupicRLpk3jREprBRGdoLdt0YcotFjEvyvfdYLP3CA1cIlnNvzghkRE_rrPhkGJ1Tup0JPFf-MO5YnuAVf0q29VigQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-bold text-lg leading-tight">Thẻ Quà Tặng</p>
+<p class="text-xs opacity-80 mt-1">Đa dạng mệnh giá</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Layout -->
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar -->
+<aside class="w-full lg:w-1/4 space-y-8">
+<!-- Danh Muc -->
+<section>
+<h3 class="font-bold text-on-surface mb-4 uppercase tracking-wider text-xs">DANH MỤC</h3>
+<ul class="space-y-2">
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg bg-primary-container text-white font-semibold transition-all">All Voucher</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-text-secondary hover:bg-gray-100 transition-all font-medium">Ẩm thực</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-text-secondary hover:bg-gray-100 transition-all font-medium">Du lịch</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-text-secondary hover:bg-gray-100 transition-all font-medium">Khách sạn</button>
+</li>
+<li>
+<button class="w-full text-left px-3 py-2 rounded-lg text-text-secondary hover:bg-gray-100 transition-all font-medium">Làm đẹp</button>
+</li>
+</ul>
+</section>
+<!-- Thuong Hieu -->
+<section>
+<h3 class="font-bold text-on-surface mb-4 uppercase tracking-wider text-xs">THƯƠNG HIỆU</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-gray-300 text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-main group-hover:text-primary transition-colors">Shopee</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-main group-hover:text-primary transition-colors">Grab</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-main group-hover:text-primary transition-colors">King BBQ</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-main group-hover:text-primary transition-colors">Highlands</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-main group-hover:text-primary transition-colors">CGV Cinema</span>
+</label>
+</div>
+</section>
+<!-- Muc Giam -->
+<section>
+<h3 class="font-bold text-on-surface mb-4 uppercase tracking-wider text-xs">MỨC GIẢM</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="border border-gray-200 py-1.5 rounded-lg text-xs font-medium hover:border-primary-container hover:text-primary-container transition-all">Dưới 10%</button>
+<button class="border border-gray-200 py-1.5 rounded-lg text-xs font-medium hover:border-primary-container hover:text-primary-container transition-all">10% - 30%</button>
+<button class="border border-gray-200 py-1.5 rounded-lg text-xs font-medium hover:border-primary-container hover:text-primary-container transition-all">30% - 50%</button>
+<button class="border border-gray-200 py-1.5 rounded-lg text-xs font-medium hover:border-primary-container hover:text-primary-container transition-all">Trên 50%</button>
+</div>
+</section>
+</aside>
+<!-- Content Area -->
+<section class="w-full lg:w-3/4">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div>
+<h2 class="text-xl font-bold text-on-surface">Tìm thấy 1,204 mã giảm giá</h2>
+<p class="text-text-secondary text-sm">Voucher hấp dẫn đang chờ đón bạn</p>
+</div>
+<div class="flex items-center bg-white p-1 rounded-xl shadow-sm border border-gray-100">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-white font-bold text-sm transition-all">Đang HOT</button>
+<button class="px-4 py-2 rounded-lg text-text-secondary font-medium text-sm hover:bg-gray-50 transition-all">Mới nhất</button>
+<button class="px-4 py-2 rounded-lg text-text-secondary font-medium text-sm hover:bg-gray-50 transition-all">Gần nhất</button>
+</div>
+</div>
+<!-- Coupon Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Ticket Card 1 -->
+<div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="relative h-44">
+<img class="w-full h-full object-cover" data-alt="sizzling grilled meat on a hot plate with herbs and spices in a professional kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgKq1NXpfHyCmeUzKha6FDMiLYZn_PbnwYvTKxVcJfZDqObD5woJNTd_zSMQJKP9aBxY0BwL9Nz-ecnmSN0QGHmcBQSYXhkEztDyybAnZ1s4Tl-JHNtO9EeM3mgUGQb7jJMHHU0dLeisoo0SNhRes1NK-b1XU0dPAD0-eGpk_DLmaL5yMtsG0lVKhPsWHlv8crgizlfyBpqcreX6JhTOOi_5ygSjTGwTAJzA8-2vrIssMhRx-vOaL18w1fM-7DkFNrADrJHzEO4xU"/>
+<div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">SỐ LƯỢNG CÓ HẠN</div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded-full border-4 border-white overflow-hidden shadow-md z-20">
+<img class="w-full h-full object-cover bg-white" data-alt="minimalist modern corporate brand logo on clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJM0cjO8hN_meCoimsTxRrAy5sdbpEhLsRllRwc6WAZka_2cbedbqgvpLziZ_hItAcfBLtyAl8KMlu4AoskQRDlC9MHD38O2EpuC2qHDTbK97ZHWOCIG6cUq6rAKmMyPL-59aDEu5IjCRDgFnNDbYkSJD4fZQuBVtVuGTa1Hi2TT77kJa77fgLYaXkqV-Sa-s68jlswWcQ84s-WXuXntMsXrWcOmvlPALjOib80Q6Ki1GLOAnutP7gT2zT-QYSNhCTPCntiui6hdw"/>
+</div>
+</div>
+<div class="ticket-cutout relative flex-1 flex flex-col pt-8 px-5 pb-5 border-t-2 border-dashed border-gray-100 mt-0.5">
+<div class="text-[#EE4D2D] font-black text-2xl mb-1 tracking-tight">GIẢM 50.000Đ</div>
+<h4 class="font-bold text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Voucher King BBQ - Buffet nướng Hàn Quốc</h4>
+<p class="text-[11px] text-text-secondary mt-1">Đơn tối thiểu 500k cho khách hàng mới</p>
+<div class="flex items-center gap-1 mt-4 text-[11px] text-gray-500">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Hết hạn: 31/12/2024</span>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex justify-between items-center text-[11px]">
+<span class="font-medium">Đã lấy 85%</span>
+<span class="text-primary font-bold">Còn 24 mã</span>
+</div>
+<div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container to-secondary-container h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+<button class="mt-5 w-full bg-primary-container text-white font-bold py-2.5 rounded-xl active:scale-95 transition-transform shadow-md shadow-primary-container/20 hover:brightness-110">Lưu Mã</button>
+</div>
+</div>
+<!-- Ticket Card 2 -->
+<div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="relative h-44">
+<img class="w-full h-full object-cover" data-alt="top view of artisanal latte art on a ceramic coffee cup with rich crema" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqi0nlrUFSalJ-YpNHZNZcapLnOi4MuM4pXZHIi8_rMxXRGNVOeABiy8-6TEeNwzcCkHn5FdoSRZkirib0weVYID71CZ5ZHa6bfqcrz3ukFODS4NyPQdAKUsQsc9uYWf3qUbpJlzP73iFLYa5LTopuFRPr36JzeJerAxdZHfwJ25y9mybVTTT2hwUQD_FSvfGYe1c9VjlnG5yC1xhkfjbcyZzOXEd9FfN2d0pTsGxI5lTYn-GWSE9COJE2Nr50QEoLSKC97QdbEuQ"/>
+<div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">SỐ LƯỢNG CÓ HẠN</div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded-full border-4 border-white overflow-hidden shadow-md z-20">
+<img class="w-full h-full object-cover bg-white" data-alt="clean geometric company icon on white background with vibrant red accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJviNrvrtCoiRTXFwCug4RVBTy_smmCqxDdL2s84fuuhxNciLfvqe6RNOzmXOLHDGm6vFyF9dZA1ob7uhTXmOstSOXSn_26sW1zvyPuxwuqg6rl3eDTy9TjnTtO9P72U_mjqCGAx9QWcP34_QwpOdGqVu3-oVh3_vWR7fXHvRB5WFxN4nrFNmvox9X1VF3UTcnHJVVF4kZU7_9hHCQAP8v-yJmrj1tPFat9XO03HrN2GfIu1n4M6ql8jdYFo8B9WDh0-j2kt4gT44"/>
+</div>
+</div>
+<div class="ticket-cutout relative flex-1 flex flex-col pt-8 px-5 pb-5 border-t-2 border-dashed border-gray-100 mt-0.5">
+<div class="text-[#EE4D2D] font-black text-2xl mb-1 tracking-tight">GIẢM 20%</div>
+<h4 class="font-bold text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Highlands Coffee - Toàn bộ Menu</h4>
+<p class="text-[11px] text-text-secondary mt-1">Áp dụng cho đơn hàng mang đi</p>
+<div class="flex items-center gap-1 mt-4 text-[11px] text-gray-500">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Hết hạn: 15/12/2024</span>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex justify-between items-center text-[11px]">
+<span class="font-medium">Đã lấy 60%</span>
+<span class="text-primary font-bold">Còn 150 mã</span>
+</div>
+<div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container to-secondary-container h-full w-[60%] rounded-full"></div>
+</div>
+</div>
+<button class="mt-5 w-full bg-primary-container text-white font-bold py-2.5 rounded-xl active:scale-95 transition-transform shadow-md shadow-primary-container/20 hover:brightness-110">Lưu Mã</button>
+</div>
+</div>
+<!-- Ticket Card 3 -->
+<div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="relative h-44">
+<img class="w-full h-full object-cover" data-alt="dynamic shot of red sneaker jumping against dark background with dramatic spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZfKltqBo4sDGCv7kb43WlM12CCavlKtg-1DE6wfXkDGdHy0emIc9YyehaNz-KfPU4CqDZcYGI_033Tc4OF70CIHNVpe-X_vQ4eocUpZAfSh8Aaue4Vcf01U9ZuhE8Hk1q3y1YGmENTWP6Wiqgk1FvZXdRM-e8cu6v1saL-lakY_OXYVDz_L-NuN2l8TQT27b4Tdn3_VRp-_o9JHU-HjyquVhkN-r_KobrGm5gnfm7GhtyV1_Jx_eSQiMHzHv05TS9ctkmEc33Hrs"/>
+<div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">SỐ LƯỢNG CÓ HẠN</div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded-full border-4 border-white overflow-hidden shadow-md z-20">
+<img class="w-full h-full object-cover bg-white" data-alt="professional brand logo with sleek typography and vibrant orange circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfEioDPOZM6Qd4cF9Xb_f_5-zgB6t_V3klRzH9DJCaB6iztUfN1-36XO8pb5mVGYmtsJVakuf2KHoU9R3mFyvdzIPEVxuG00QyGFtZu7UgoA9SEgC4PgphEyDwKZXDlweN1vYzRszUTl9qGow05_VP9Xyhzz6s9WlcTt0pY_0pmDQcrb0TcPe5JOv7FROqMukwJsIIO3VPAzSIIb4EVT9Tb-0eZTZGAffprYdjgH_THEWEaNa6HMG-ui_NUkC7u_9iafnaQrZniAs"/>
+</div>
+</div>
+<div class="ticket-cutout relative flex-1 flex flex-col pt-8 px-5 pb-5 border-t-2 border-dashed border-gray-100 mt-0.5">
+<div class="text-[#EE4D2D] font-black text-2xl mb-1 tracking-tight">GIẢM 100.000Đ</div>
+<h4 class="font-bold text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Voucher Shopee Mall - Thời trang nam</h4>
+<p class="text-[11px] text-text-secondary mt-1">Áp dụng cho mọi hình thức thanh toán</p>
+<div class="flex items-center gap-1 mt-4 text-[11px] text-gray-500">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Hết hạn: 20/12/2024</span>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex justify-between items-center text-[11px]">
+<span class="font-medium">Đã lấy 95%</span>
+<span class="text-primary font-bold">Còn 5 mã</span>
+</div>
+<div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container to-secondary-container h-full w-[95%] rounded-full"></div>
+</div>
+</div>
+<button class="mt-5 w-full bg-primary-container text-white font-bold py-2.5 rounded-xl active:scale-95 transition-transform shadow-md shadow-primary-container/20 hover:brightness-110">Lưu Mã</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-gray-400 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary-container text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-text-secondary hover:text-primary hover:border-primary transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-text-secondary hover:text-primary hover:border-primary transition-all">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-text-secondary">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-text-secondary hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full border-t border-gray-200 dark:border-gray-800 mt-20">
+<div class="max-w-7xl mx-auto py-12 px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-gray-900 dark:text-white mb-4 block">Dealtoday</span>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                        Nền tảng thương mại điện tử hàng đầu cung cấp voucher, thẻ quà tặng và các ưu đãi hấp dẫn từ hàng ngàn thương hiệu uy tín.
+                    </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Thông tin</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-[#FF5B00] transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Hỗ trợ</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-[#FF5B00] transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-[#FF5B00] transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Liên hệ</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:bg-[#FF5B00] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:bg-[#FF5B00] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+<span>© 2024 Dealtoday. All rights reserved.</span>
+<div class="flex gap-6 mt-4 md:mt-0">
+<img class="h-8 opacity-60" data-alt="official vietnam ministry of industry and trade registered business seal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TVAV0X0cyv0Hm_ybfdBNYVyTx19ZDlBmrk5GYPOZRLXrb4GVcS9AeMsf80VwjoubJ7kJ8mMJEChaZeKJk_3zejGEP4XAAPvTLTFZtxNR9tt076MI87GPM11bwftvpgVgoNEHz8eF-mqAPXhbRpdxpExnO_txLsOeJIO1rlR0-XNIBL0YTRCxPfloM2p46i5ueqPAo27MFZTl36XM_jWS4B5_kd3xVJdEWi2lTm5Y_0GAyyWNRfe_yF6LfTfZkpcERKI1h4HvCDc"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
